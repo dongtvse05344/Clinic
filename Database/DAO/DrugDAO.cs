@@ -24,7 +24,7 @@ namespace Database.DAO
             drug.Id = int.Parse(row["Id"].ToString());
             drug.Name = row["Name"].ToString().Trim();
             drug.Code = row["Code"].ToString().Trim();
-            drug.UnitPrice = row["UnitPrice"].ToString().Trim();
+            drug.UnitPrice = float.Parse(row["UnitPrice"].ToString());
             drug.Type = row["Type"].ToString().Trim();
             return drug;
         }
@@ -65,7 +65,7 @@ namespace Database.DAO
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@Name", SqlDbType.NVarChar) { Value = drug.Name };
             sqlParameters[1] = new SqlParameter("@Code", SqlDbType.NVarChar) { Value = drug.Code };
-            sqlParameters[2] = new SqlParameter("@UnitPrice", SqlDbType.NVarChar) { Value = drug.UnitPrice };
+            sqlParameters[2] = new SqlParameter("@UnitPrice", SqlDbType.Float) { Value = drug.UnitPrice };
             sqlParameters[3] = new SqlParameter("@Type", SqlDbType.NVarChar) { Value = drug.Type };
 
             try
@@ -85,7 +85,7 @@ namespace Database.DAO
             SqlParameter[] sqlParameters = new SqlParameter[5];
             sqlParameters[0] = new SqlParameter("@Name", SqlDbType.NVarChar) { Value = drug.Name };
             sqlParameters[1] = new SqlParameter("@Code", SqlDbType.NVarChar) { Value = drug.Code };
-            sqlParameters[2] = new SqlParameter("@UnitPrice", SqlDbType.NVarChar) { Value = drug.UnitPrice };
+            sqlParameters[2] = new SqlParameter("@UnitPrice", SqlDbType.Float) { Value = drug.UnitPrice };
             sqlParameters[3] = new SqlParameter("@Type", SqlDbType.NVarChar) { Value = drug.Type };
             sqlParameters[4] = new SqlParameter("@Id", SqlDbType.NVarChar) { Value = drug.Id };
 

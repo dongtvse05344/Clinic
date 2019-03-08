@@ -11,7 +11,7 @@ namespace Database.DTO
         public int Id { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
-        public string UnitPrice { get; set; }
+        public float UnitPrice { get; set; }
         public string Type { get; set; }
     }
 }
