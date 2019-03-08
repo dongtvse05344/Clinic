@@ -30,6 +30,10 @@
         {
             this.dgvManageDrug = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtType = new System.Windows.Forms.TextBox();
+            this.txtUnitPrice = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSearchName = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -41,10 +45,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtUnitPrice = new System.Windows.Forms.TextBox();
-            this.txtType = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManageDrug)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             // 
             this.dgvManageDrug.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvManageDrug.Location = new System.Drawing.Point(9, 62);
-            this.dgvManageDrug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvManageDrug.Margin = new System.Windows.Forms.Padding(2);
             this.dgvManageDrug.Name = "dgvManageDrug";
             this.dgvManageDrug.RowTemplate.Height = 24;
             this.dgvManageDrug.Size = new System.Drawing.Size(268, 235);
@@ -84,6 +84,42 @@
             this.panel1.Size = new System.Drawing.Size(371, 235);
             this.panel1.TabIndex = 8;
             // 
+            // txtType
+            // 
+            this.txtType.Location = new System.Drawing.Point(77, 134);
+            this.txtType.Margin = new System.Windows.Forms.Padding(2);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(211, 20);
+            this.txtType.TabIndex = 5;
+            // 
+            // txtUnitPrice
+            // 
+            this.txtUnitPrice.Location = new System.Drawing.Point(77, 99);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUnitPrice.Name = "txtUnitPrice";
+            this.txtUnitPrice.Size = new System.Drawing.Size(211, 20);
+            this.txtUnitPrice.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 137);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Type :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 106);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "UnitPrice :";
+            // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(305, 174);
@@ -93,6 +129,7 @@
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSearchName
             // 
@@ -103,6 +140,7 @@
             this.btnSearchName.TabIndex = 9;
             this.btnSearchName.Text = "SearchName";
             this.btnSearchName.UseVisualStyleBackColor = true;
+            this.btnSearchName.Click += new System.EventHandler(this.btnSearchName_Click);
             // 
             // btnUpdate
             // 
@@ -113,6 +151,7 @@
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 
@@ -142,7 +181,7 @@
             this.txtCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(211, 20);
-            this.txtCode.TabIndex = 5;
+            this.txtCode.TabIndex = 3;
             // 
             // txtName
             // 
@@ -150,15 +189,16 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(211, 20);
-            this.txtName.TabIndex = 4;
+            this.txtName.TabIndex = 2;
             // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(77, 12);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(211, 20);
-            this.txtID.TabIndex = 3;
+            this.txtID.TabIndex = 1;
             // 
             // label3
             // 
@@ -190,42 +230,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "ID :";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 106);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "UnitPrice :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 137);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Type :";
-            // 
-            // txtUnitPrice
-            // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(77, 99);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUnitPrice.Name = "txtUnitPrice";
-            this.txtUnitPrice.Size = new System.Drawing.Size(211, 20);
-            this.txtUnitPrice.TabIndex = 13;
-            // 
-            // txtType
-            // 
-            this.txtType.Location = new System.Drawing.Point(77, 134);
-            this.txtType.Margin = new System.Windows.Forms.Padding(2);
-            this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(211, 20);
-            this.txtType.TabIndex = 14;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,7 +237,7 @@
             this.ClientSize = new System.Drawing.Size(668, 360);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvManageDrug);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Manage Drug";
             this.Load += new System.EventHandler(this.Form1_Load);

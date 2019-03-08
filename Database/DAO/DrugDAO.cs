@@ -59,9 +59,22 @@ namespace Database.DAO
             }
             return null;
         }
+        public Drug GetByName(string _name)
+        {
+            string query = "Select *From Drugs where Name = @Name  and IsActive = 'true'";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Name", SqlDbType.NVarChar);
+            sqlParameters[0].Value = _name;
+            DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
+            if(dt.Rows.Count >0)
+            {
+                return GetDrugFromDataRow(dt.Rows[0]);
+            }
+            return null;
+        }
         public bool Add(Drug drug)
         {
-            string query = "INSERT INTO Drugs values(@Name,@Code,@UnitPrice,@Type)";
+            string query = "INSERT INTO Drugs values(@Name,@Code,@UnitPrice,@Type,'true')";
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@Name", SqlDbType.NVarChar) { Value = drug.Name };
             sqlParameters[1] = new SqlParameter("@Code", SqlDbType.NVarChar) { Value = drug.Code };

@@ -19,6 +19,8 @@ namespace Database.Connection
             string strConn = ConfigurationManager.
                      ConnectionStrings["dbConnectionString"].ConnectionString;
             conn = new SqlConnection(strConn);
+            myAdapter = new SqlDataAdapter();
+
         }
 
         private SqlConnection OpenConnection()

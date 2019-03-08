@@ -23,7 +23,7 @@ namespace Database.BLL
             {
                 return _drugDAO.GetDrugs();
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
                 throw new Exception("Load data of drug is fail");
             }
@@ -40,7 +40,19 @@ namespace Database.BLL
                 throw new Exception("Id is invalid");
             }
         }
+        public Drug GetByName(string name)
+        {
+            try
+            {
+                return _drugDAO.GetByName(name);
 
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception("Name is invalid");
+            }
+        }
         public void Add(Drug drug)
         {
             try
@@ -69,6 +81,19 @@ namespace Database.BLL
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+        public void Delete(int id)
+        {
+            
+            if (id < 0)
+            {
+                throw new Exception("Id is invalid");
+            }
+            if (!_drugDAO.Delete(id))
+            {
+                throw new Exception("Delete fail");
+
             }
         }
     }
