@@ -31,6 +31,11 @@ namespace Clinic
         private void btnLoad_Click(object sender, EventArgs e)
         {
             LoadData();
+            txtID.Clear();
+            txtName.Clear();
+            txtCode.Clear();
+            txtUnitPrice.Clear();
+            txtType.Clear();
         }
         private void LoadData()
         {
@@ -44,21 +49,18 @@ namespace Clinic
 
         private void dgvManageDrug_Click(object sender, EventArgs e)
         {
-            if(dgvManageDrug.SelectedRows.Count > 0)
+            int index = dgvManageDrug.CurrentRow.Index;
+            if (dgvManageDrug.SelectedRows.Count > 0)
             {
-                int id = (int)dgvManageDrug.SelectedRows[0].Cells[0].Value;
-                var drug = _drugBLL.GetById(id);
-                if(drug != null)
-                {
-                    txtID.Text = drug.Id.ToString();
-                    txtName.Text = drug.Name.ToString();
-                    txtCode.Text = drug.Code.ToString();
-                    txtUnitPrice.Text = drug.UnitPrice.ToString();
-                    txtType.Text = drug.Type.ToString();
-                }
+                txtID.Text = dgvManageDrug.SelectedRows[0].Cells["Id"].Value.ToString();
+                txtName.Text = dgvManageDrug.SelectedRows[0].Cells["Name"].Value.ToString();
+                txtCode.Text = dgvManageDrug.SelectedRows[0].Cells["Code"].Value.ToString();
+                txtUnitPrice.Text = dgvManageDrug.SelectedRows[0].Cells["UnitPrice"].Value.ToString();
+                txtType.Text = dgvManageDrug.SelectedRows[0].Cells["Type"].Value.ToString();
+
             }
         }
-        
+
         private void btnInsert_Click(object sender, EventArgs e)
         {
             string name = txtName.Text;
@@ -83,7 +85,7 @@ namespace Clinic
             }
 
         }
-     
+
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -92,7 +94,7 @@ namespace Clinic
                 int id = int.Parse(txtID.Text);
                 string name = txtName.Text;
                 string code = txtCode.Text;
-                float unitPrice = float.Parse( txtUnitPrice.Text);
+                float unitPrice = float.Parse(txtUnitPrice.Text);
                 string type = txtType.Text;
                 var drug = new Drug
                 {
@@ -116,19 +118,7 @@ namespace Clinic
         {
             try
             {
-                Drug drug = _drugBLL.GetByName(txtName.Text);
-                if (drug == null)
-                {
-                    MessageBox.Show("Not Found 404");
-                }
-                else
-                {
-                    txtID.Text = drug.Id.ToString();
-                    txtName.Text = drug.Name;
-                    txtCode.Text = drug.Code;
-                    txtUnitPrice.Text = drug.UnitPrice.ToString();
-                    txtType.Text = drug.Type;
-                }
+                dgvManageDrug.DataSource = _drugBLL.GetByName(txtName.Text);
             }
             catch (Exception ex)
             {
@@ -144,6 +134,12 @@ namespace Clinic
                 int id = int.Parse(txtID.Text);
                 _drugBLL.Delete(id);
                 MessageBox.Show("Delete Sucess");
+                LoadData();
+                txtID.Clear();
+                txtName.Clear();
+                txtCode.Clear();
+                txtUnitPrice.Clear();
+                txtType.Clear();
             }
             catch (Exception ex)
             {

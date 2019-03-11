@@ -40,7 +40,7 @@ namespace Database.BLL
                 throw new Exception("Id is invalid");
             }
         }
-        public Drug GetByName(string name)
+        public List<Drug> GetByName(string name)
         {
             try
             {

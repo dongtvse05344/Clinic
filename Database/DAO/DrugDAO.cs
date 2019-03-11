@@ -59,18 +59,21 @@ namespace Database.DAO
             }
             return null;
         }
-        public Drug GetByName(string _name)
+        public List<Drug> GetByName(string _name)
         {
-            string query = "Select *From Drugs where Name = @Name  and IsActive = 'true'";
+            string query = "Select * From Drugs where Name LIKE @Name  and IsActive = 'true'";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@Name", SqlDbType.NVarChar);
-            sqlParameters[0].Value = _name;
+            sqlParameters[0].Value = "%"+ _name + "%";
             DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
-            if(dt.Rows.Count >0)
+            List<Drug> list = new List<Drug>();
+
+            foreach (DataRow r in dt.Rows)
             {
-                return GetDrugFromDataRow(dt.Rows[0]);
+                Drug drug = GetDrugFromDataRow(r);
+                list.Add(drug);
             }
-            return null;
+            return list;
         }
         public bool Add(Drug drug)
         {
@@ -118,7 +121,7 @@ namespace Database.DAO
             string query = "Update Drugs SET IsActive=@IsActive WHERE id=@Id";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@Id", SqlDbType.Int) { Value = id };
-            sqlParameters[0] = new SqlParameter("@IsActive", SqlDbType.Bit) { Value = false };
+            sqlParameters[1] = new SqlParameter("@IsActive", SqlDbType.Bit) { Value = false };
 
             try
             {

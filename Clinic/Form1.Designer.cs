@@ -81,7 +81,7 @@
             this.panel1.Location = new System.Drawing.Point(296, 62);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(371, 235);
+            this.panel1.Size = new System.Drawing.Size(304, 235);
             this.panel1.TabIndex = 8;
             // 
             // txtType
@@ -122,7 +122,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(305, 174);
+            this.btnDelete.Location = new System.Drawing.Point(232, 174);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(56, 31);
@@ -133,10 +133,10 @@
             // 
             // btnSearchName
             // 
-            this.btnSearchName.Location = new System.Drawing.Point(212, 174);
+            this.btnSearchName.Location = new System.Drawing.Point(200, 10);
             this.btnSearchName.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchName.Name = "btnSearchName";
-            this.btnSearchName.Size = new System.Drawing.Size(89, 31);
+            this.btnSearchName.Size = new System.Drawing.Size(88, 22);
             this.btnSearchName.TabIndex = 9;
             this.btnSearchName.Text = "SearchName";
             this.btnSearchName.UseVisualStyleBackColor = true;
@@ -144,7 +144,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(140, 174);
+            this.btnUpdate.Location = new System.Drawing.Point(152, 174);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(56, 31);
@@ -197,7 +197,7 @@
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(211, 20);
+            this.txtID.Size = new System.Drawing.Size(119, 20);
             this.txtID.TabIndex = 1;
             // 
             // label3
@@ -234,7 +234,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 360);
+            this.ClientSize = new System.Drawing.Size(603, 303);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvManageDrug);
             this.Margin = new System.Windows.Forms.Padding(2);
