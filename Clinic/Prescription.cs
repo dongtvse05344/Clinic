@@ -98,5 +98,13 @@ namespace Clinic
             }
            
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            txtId.Clear();
+            txtName.Clear();
+            txtAddress.Clear();
+            txtPhone.Clear();
+        }
     }
 }
