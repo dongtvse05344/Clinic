@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace Clinic
 {
-    public partial class Form1 : Form
+    public partial class DrugManage : Form
     {
         private DrugBLL _drugBLL;
-        public Form1()
+        public DrugManage()
         {
             InitializeComponent();
             _drugBLL = new DrugBLL();
