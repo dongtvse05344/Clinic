@@ -33,6 +33,9 @@ namespace Clinic
                 if (rdnFemale.Checked) { doctor.Gender = 0; } else { doctor.Gender = 1; }
                 string code = _doctorBLL.CreateDoctor(doctor);
                 MessageBox.Show("Your code is : " + code + " \n Please remember this");
+                Login login = new Login();
+                login.Show();
+                this.Hide();
             }
             catch (Exception ex)
             {
