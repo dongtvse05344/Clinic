@@ -31,6 +31,10 @@ namespace Clinic
         private void btnLoad_Click(object sender, EventArgs e)
         {
             LoadData();
+            ClearTxt();
+        }
+        private void ClearTxt()
+        {
             txtID.Clear();
             txtName.Clear();
             txtCode.Clear();
@@ -78,6 +82,7 @@ namespace Clinic
                 });
                 MessageBox.Show("Insert successful!");
                 LoadData();
+                ClearTxt();
             }
             catch (Exception ex)
             {
@@ -107,6 +112,7 @@ namespace Clinic
                 _drugBLL.Update(drug);
                 MessageBox.Show("Update successful!");
                 LoadData();
+                ClearTxt();
             }
             catch (Exception ex)
             {
@@ -135,11 +141,7 @@ namespace Clinic
                 _drugBLL.Delete(id);
                 MessageBox.Show("Delete Sucess");
                 LoadData();
-                txtID.Clear();
-                txtName.Clear();
-                txtCode.Clear();
-                txtUnitPrice.Clear();
-                txtType.Clear();
+                ClearTxt();
             }
             catch (Exception ex)
             {
