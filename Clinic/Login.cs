@@ -32,6 +32,9 @@ namespace Clinic
                 else
                 {
                     MessageBox.Show("Hello " + doctor.Name);
+                    Prescription pre = new Prescription(doctor);
+                    pre.Show();
+                    this.Hide();
                 }
             }
             catch (Exception ex)
