@@ -30,7 +30,7 @@ namespace Clinic
                 {
                     Name = txtName.Text,
                 };
-                if (rdnFemale.Checked) { doctor.Gender = 0; } else { doctor.Gender = 1; }
+                if (rdnFemale.Checked) { doctor.Gender = 1; } else { doctor.Gender = 0; }
                 string code = _doctorBLL.CreateDoctor(doctor);
                 MessageBox.Show("Your code is : " + code + " \n Please remember this");
                 Login login = new Login();

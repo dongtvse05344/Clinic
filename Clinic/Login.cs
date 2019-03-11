@@ -18,6 +18,7 @@ namespace Clinic
         {
             InitializeComponent();
             _doctorBLL = new DoctorBLL();
+            txtCode.Text = "96132";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace Clinic
                 }
                 else
                 {
-                    MessageBox.Show("Hello " + doctor.Name);
+                    //MessageBox.Show("Hello " + doctor.Name);
                     Prescription pre = new Prescription(doctor);
                     pre.Show();
                     this.Hide();
@@ -48,6 +49,11 @@ namespace Clinic
             Register register = new Register();
             register.Show();
             this.Hide();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

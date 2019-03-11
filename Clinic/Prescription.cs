@@ -1,4 +1,5 @@
-﻿using Database.DTO;
+﻿using Database.BLL;
+using Database.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace Clinic
     public partial class Prescription : Form
     {
         private Doctor currentDoctor;
+        private CustomerBLL _customerBLL;
         public Prescription()
         {
             InitializeComponent();
@@ -22,11 +24,79 @@ namespace Clinic
         {
             InitializeComponent();
             currentDoctor = doctor;
+            _customerBLL = new CustomerBLL();
             label1.Text += currentDoctor.Name;
+            txtBirthDate.Format = DateTimePickerFormat.Custom;
+            txtBirthDate.CustomFormat = "yyyy-MM-dd";
+            rbFemale.Checked = true;
         }
         private void Prescription_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGetByPhone_Click(object sender, EventArgs e)
+        {
+            string phone = txtPhone.Text;
+            var customer  = _customerBLL.GetByPhone(phone);
+            if (customer ==null)
+            {
+                MessageBox.Show("Vui lòng điền thông tin khách hàng.");
+            }
+            else
+            {
+                txtId.Text = customer.Id.ToString();
+                txtName.Text = customer.Name; 
+                txtAddress.Text = customer.Address;
+                txtPhone.Text = customer.Phone;
+                txtBirthDate.Text = customer.BirthDate;
+                if(customer.Gender ==0)
+                {
+                    rbMale.Checked = true;
+                }
+                else
+                {
+                    rbFemale.Checked = true;
+                }
+            }
+
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Customer customer = new Customer {
+                   
+                    Name = txtName.Text,
+                    Address = txtAddress.Text,
+                    Phone = txtPhone.Text,
+                    BirthDate = txtBirthDate.Text,
+                };
+                int id = -1;
+                try
+                {
+                    id = int.Parse(txtId.Text);
+                }
+                catch (Exception)
+                {
+                }
+                customer.Id = id;
+                if (rbFemale.Checked) { customer.Gender = 1; } else { customer.Gender = 0; }
+
+                _customerBLL.AddOrUpdate(customer);
+                MessageBox.Show("Update information success");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
         }
     }
 }

@@ -68,7 +68,7 @@ namespace Database.DAO
 
         public bool Update(Customer Customer)
         {
-            string query = "UPDATE Customers SET Name=@Name, Address=@Address, Phone=@Phone, BirthDate=@BirthDate,Gender=@Gender," +
+            string query = "UPDATE Customers SET Name=@Name, Address=@Address, Phone=@Phone, BirthDate=@BirthDate,Gender=@Gender" +
                 " WHERE Id=@Id";
             SqlParameter[] sqlParameters = new SqlParameter[6];
             sqlParameters[0] = new SqlParameter("@Name", SqlDbType.NVarChar) { Value = Customer.Name };
