@@ -45,13 +45,29 @@ namespace Database.DAO
             }
             return null;
         }
+        public Customer GetById(int id)
+        {
+            string query = "select * from Customers where Id = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Id", SqlDbType.Int)
+            {
+                Value = id
+            };
+
+            DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
+            if (dt.Rows.Count > 0)
+            {
+                return GetCustomerFromDataRow(dt.Rows[0]);
+            }
+            return null;
+        }
         public bool Add(Customer Customer)
         {
             string query = "INSERT INTO Customers values(@Name,@Address,@Phone,@BirthDate,@Gender)";
             SqlParameter[] sqlParameters = new SqlParameter[5];
             sqlParameters[0] = new SqlParameter("@Name", SqlDbType.NVarChar) { Value = Customer.Name };
             sqlParameters[1] = new SqlParameter("@Address", SqlDbType.NVarChar) { Value = Customer.Address };
-            sqlParameters[2] = new SqlParameter("@Phone", SqlDbType.NVarChar) { Value = Customer.Phone };
+            sqlParameters[2] = new SqlParameter("@Phone", SqlDbType.VarChar) { Value = Customer.Phone };
             sqlParameters[3] = new SqlParameter("@BirthDate", SqlDbType.NVarChar) { Value = Customer.BirthDate };
             sqlParameters[4] = new SqlParameter("@Gender", SqlDbType.NVarChar) { Value = Customer.Gender };
 

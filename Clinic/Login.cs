@@ -18,7 +18,7 @@ namespace Clinic
         {
             InitializeComponent();
             _doctorBLL = new DoctorBLL();
-            txtCode.Text = "96132";
+            txtCode.Text = "02528";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

@@ -25,7 +25,7 @@ namespace Database.BLL
         {
             try
             {
-                if(GetByPhone(customer.Phone) ==null)
+                if(_customerDAO.GetById(customer.Id) ==null)
                 {
                     _customerDAO.Add(customer);
                 }
