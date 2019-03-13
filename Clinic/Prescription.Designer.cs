@@ -28,214 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtBirthDate = new System.Windows.Forms.DateTimePicker();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.btnOk = new System.Windows.Forms.Button();
-            this.btnGetByPhone = new System.Windows.Forms.Button();
-            this.rbMale = new System.Windows.Forms.RadioButton();
-            this.rbFemale = new System.Windows.Forms.RadioButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.lblDoctor = new System.Windows.Forms.Label();
+            this.lblCustomer = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.featureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kêĐơnThuốcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblDoctor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Đây là trang tạo đơn thuốc của :";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblDoctor.AutoSize = true;
+            this.lblDoctor.Location = new System.Drawing.Point(13, 38);
+            this.lblDoctor.Name = "lblDoctor";
+            this.lblDoctor.Size = new System.Drawing.Size(54, 17);
+            this.lblDoctor.TabIndex = 0;
+            this.lblDoctor.Text = "Bác sĩ :";
             // 
-            // panel1
+            // lblCustomer
             // 
-            this.panel1.Controls.Add(this.btnRefresh);
-            this.panel1.Controls.Add(this.txtBirthDate);
-            this.panel1.Controls.Add(this.txtPhone);
-            this.panel1.Controls.Add(this.txtAddress);
-            this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.txtId);
-            this.panel1.Controls.Add(this.btnOk);
-            this.panel1.Controls.Add(this.btnGetByPhone);
-            this.panel1.Controls.Add(this.rbMale);
-            this.panel1.Controls.Add(this.rbFemale);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(48, 52);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 248);
-            this.panel1.TabIndex = 1;
+            this.lblCustomer.AutoSize = true;
+            this.lblCustomer.Location = new System.Drawing.Point(13, 65);
+            this.lblCustomer.Name = "lblCustomer";
+            this.lblCustomer.Size = new System.Drawing.Size(85, 17);
+            this.lblCustomer.TabIndex = 1;
+            this.lblCustomer.Text = "Bệnh nhân :";
             // 
-            // txtBirthDate
+            // menuStrip1
             // 
-            this.txtBirthDate.Location = new System.Drawing.Point(60, 138);
-            this.txtBirthDate.Name = "txtBirthDate";
-            this.txtBirthDate.Size = new System.Drawing.Size(134, 20);
-            this.txtBirthDate.TabIndex = 14;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.featureToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // txtPhone
+            // featureToolStripMenuItem
             // 
-            this.txtPhone.Location = new System.Drawing.Point(60, 112);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(134, 20);
-            this.txtPhone.TabIndex = 13;
+            this.featureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kêĐơnThuốcToolStripMenuItem,
+            this.đăngXuấtToolStripMenuItem});
+            this.featureToolStripMenuItem.Name = "featureToolStripMenuItem";
+            this.featureToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.featureToolStripMenuItem.Text = "Tính năng";
             // 
-            // txtAddress
+            // kêĐơnThuốcToolStripMenuItem
             // 
-            this.txtAddress.Location = new System.Drawing.Point(60, 82);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(134, 20);
-            this.txtAddress.TabIndex = 12;
+            this.kêĐơnThuốcToolStripMenuItem.Name = "kêĐơnThuốcToolStripMenuItem";
+            this.kêĐơnThuốcToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.kêĐơnThuốcToolStripMenuItem.Text = "Kê đơn thuốc";
             // 
-            // txtName
+            // đăngXuấtToolStripMenuItem
             // 
-            this.txtName.Location = new System.Drawing.Point(60, 51);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(134, 20);
-            this.txtName.TabIndex = 11;
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(60, 18);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(134, 20);
-            this.txtId.TabIndex = 10;
-            // 
-            // btnOk
-            // 
-            this.btnOk.Location = new System.Drawing.Point(140, 211);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 23);
-            this.btnOk.TabIndex = 9;
-            this.btnOk.Text = "OK";
-            this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
-            // 
-            // btnGetByPhone
-            // 
-            this.btnGetByPhone.Location = new System.Drawing.Point(200, 110);
-            this.btnGetByPhone.Name = "btnGetByPhone";
-            this.btnGetByPhone.Size = new System.Drawing.Size(75, 23);
-            this.btnGetByPhone.TabIndex = 8;
-            this.btnGetByPhone.Text = "Get";
-            this.btnGetByPhone.UseVisualStyleBackColor = true;
-            this.btnGetByPhone.Click += new System.EventHandler(this.btnGetByPhone_Click);
-            // 
-            // rbMale
-            // 
-            this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(167, 176);
-            this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(48, 17);
-            this.rbMale.TabIndex = 7;
-            this.rbMale.TabStop = true;
-            this.rbMale.Text = "Male";
-            this.rbMale.UseVisualStyleBackColor = true;
-            // 
-            // rbFemale
-            // 
-            this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(60, 176);
-            this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(59, 17);
-            this.rbFemale.TabIndex = 6;
-            this.rbFemale.TabStop = true;
-            this.rbFemale.Text = "Female";
-            this.rbFemale.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 178);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Gender :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 146);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Birth Date :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Phone :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 82);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Address :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Name :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Id :";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(44, 211);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 15;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // Prescription
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 331);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCustomer);
+            this.Controls.Add(this.lblDoctor);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Prescription";
             this.Text = "Prescription";
-            this.Load += new System.EventHandler(this.Prescription_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,23 +107,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnOk;
-        private System.Windows.Forms.Button btnGetByPhone;
-        private System.Windows.Forms.RadioButton rbMale;
-        private System.Windows.Forms.RadioButton rbFemale;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.DateTimePicker txtBirthDate;
-        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label lblDoctor;
+        private System.Windows.Forms.Label lblCustomer;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem featureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kêĐơnThuốcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
     }
 }

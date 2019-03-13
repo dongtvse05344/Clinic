@@ -31,7 +31,7 @@ namespace Database.DAO
             return Prescription;
         }
 
-        public string Add( Prescription  Prescription)
+        public int Add( Prescription  Prescription)
         {
             string query = "INSERT INTO Prescriptions " +
                 "OUTPUT Inserted.ID " +
@@ -48,14 +48,31 @@ namespace Database.DAO
                 DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
                 if(dt.Rows.Count>0)
                 {
-                    return dt.Rows[0]["ID"].ToString();
+                    return int.Parse(dt.Rows[0]["ID"].ToString());
                 }
-                return null;
+                return -1;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        public List<Prescription> GetPrescriptionsByCustomer(int customerId)
+        {
+            string query = "select * from Prescriptions where CustomerId = @CustomerId ORDER BY DateCreated DESC";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@CustomerId", SqlDbType.Int)
+            {
+                Value = customerId
+            };
+            List<Prescription> result = new List<Prescription>();
+            DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
+            while (dt.Rows.Count > 0)
+            {
+                result.Add(GetPrescriptionFromDataRow(dt.Rows[0]));
+            }
+            return result;
         }
     }
 }

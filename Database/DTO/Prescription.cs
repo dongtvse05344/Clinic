@@ -14,5 +14,6 @@ namespace Database.DTO
         public string Description { get; set; }
         public int CustomerId { get; set; }
         public int DoctorId { get; set; }
+        public List<PrescriptionDetail> Details { get; set; }
     }
 }
