@@ -32,7 +32,7 @@ namespace Clinic
         }
         private void Prescription_Load(object sender, EventArgs e)
         {
-
+            txtPhone.Text = "012341234";
         }
 
         private void label1_Click(object sender, EventArgs e)
