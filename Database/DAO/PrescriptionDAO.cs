@@ -31,9 +31,11 @@ namespace Database.DAO
             return Prescription;
         }
 
-        public bool Add( Prescription  Prescription)
+        public string Add( Prescription  Prescription)
         {
-            string query = "INSERT INTO Prescriptions values(@DateCreated,@Diagnostic,@Description,@CustomerId,@DoctorId)";
+            string query = "INSERT INTO Prescriptions " +
+                "OUTPUT Inserted.ID " +
+                "values(@DateCreated,@Diagnostic,@Description,@CustomerId,@DoctorId)";
             SqlParameter[] sqlParameters = new SqlParameter[5];
             sqlParameters[0] = new SqlParameter("@DateCreated", SqlDbType.DateTime) { Value =  Prescription.DateCreated };
             sqlParameters[1] = new SqlParameter("@Diagnostic", SqlDbType.NVarChar) { Value =  Prescription.Diagnostic };
@@ -43,8 +45,12 @@ namespace Database.DAO
 
             try
             {
-                conn.ExecuteInsertQuery(query, sqlParameters);
-                return true;
+                DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
+                if(dt.Rows.Count>0)
+                {
+                    return dt.Rows[0]["ID"].ToString();
+                }
+                return null;
             }
             catch (Exception ex)
             {
