@@ -70,7 +70,7 @@ namespace Database.DAO
             DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
             foreach (DataRow r in dt.Rows)
             {
-                result.Add(GetPrescriptionFromDataRow(dt.Rows[0]));
+                result.Add(GetPrescriptionFromDataRow(r));
             }
             return result;
         }
