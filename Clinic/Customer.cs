@@ -16,10 +16,7 @@ namespace Clinic
     {
         private Doctor currentDoctor;
         private CustomerBLL _customerBLL;
-        public Customer()
-        {
-            InitializeComponent();
-        }
+        
         public Customer(Doctor doctor)
         {
             InitializeComponent();

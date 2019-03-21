@@ -137,5 +137,17 @@ namespace Clinic
             log.Show();
             this.Hide();
         }
+
+        private void QuanLyKhoThuoc_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }

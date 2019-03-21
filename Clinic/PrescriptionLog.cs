@@ -54,5 +54,38 @@ namespace Clinic
         {
 
         }
+
+        private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void tạoĐơnThuốcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Prescription prescription = new Prescription(this.doctor, this.customer) ;
+            prescription.Show();
+            this.Hide();
+        }
+
+        private void quảnLíKhoThuốcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DrugManage drugManage = new DrugManage();
+            drugManage.Show();
+            this.Hide();
+        }
+
+        private void kháchHàngMớiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customer Formcustomer = new Customer(this.doctor) ;
+            Formcustomer.Show();
+            this.Hide();
+        }
     }
 }
