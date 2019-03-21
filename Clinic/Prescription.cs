@@ -49,26 +49,40 @@ namespace Clinic
         {
             try
             {
-                //validate
-                _prescriptionDetails.Add(new PrescriptionDetail
+                if (string.IsNullOrEmpty(txtMorning.Text)||
+                    string.IsNullOrEmpty(txtNoon.Text)||
+                    string.IsNullOrEmpty(txtAfternoon.Text)||
+                    string.IsNullOrEmpty(txtEvening.Text)||
+                    string.IsNullOrEmpty(txtSoLuong.Text)||
+                    string.IsNullOrEmpty(txtToUse.Text))
                 {
-                    DrugId = int.Parse(txtTenThuoc.SelectedValue.ToString()),
-                    DrugName = ((Drug)txtTenThuoc.SelectedItem).Name.ToString(),
-                    Morning = int.Parse(txtMorning.Text.ToString()),
-                    Afternoon = int.Parse(txtAfternoon.Text.ToString()),
-                    Noon = int.Parse(txtNoon.Text.ToString()),
-                    Evening = int.Parse(txtEvening.Text.ToString()),
-                    IsLunch = cbLunch.Checked,
-                    Quantity = int.Parse(txtSoLuong.Text.ToString()),
-                    ToUse = txtToUse.Text
-                });
-                LoadData();
+                    MessageBox.Show("Vui lòng nhập dữ liệu");
+                }
+                
+
+                
+                else
+                {
+                    _prescriptionDetails.Add(new PrescriptionDetail
+                    {
+                        DrugId = int.Parse(txtTenThuoc.SelectedValue.ToString()),
+                        DrugName = ((Drug)txtTenThuoc.SelectedItem).Name.ToString(),
+                        Morning = int.Parse(txtMorning.Text.ToString()),
+                        Afternoon = int.Parse(txtAfternoon.Text.ToString()),
+                        Noon = int.Parse(txtNoon.Text.ToString()),
+                        Evening = int.Parse(txtEvening.Text.ToString()),
+                        IsLunch = cbLunch.Checked,
+                        Quantity = int.Parse(txtSoLuong.Text.ToString()),
+                        ToUse = txtToUse.Text
+                    });
+                    LoadData();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void LoadData()
@@ -98,9 +112,23 @@ namespace Clinic
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int index = dgvPrescription.CurrentRow.Index;
-            this._prescriptionDetails.RemoveAt(index);
-            LoadData();
+            try
+            {
+                int index = dgvPrescription.CurrentRow.Index;
+                this._prescriptionDetails.RemoveAt(index);
+                LoadData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }
