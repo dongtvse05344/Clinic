@@ -102,5 +102,12 @@ namespace Clinic
             this._prescriptionDetails.RemoveAt(index);
             LoadData();
         }
+
+        private void keDonThuoc_Click(object sender, EventArgs e)
+        {
+            PrescriptionLog log = new PrescriptionLog(this.doctor,this.customer);
+            log.Show();
+            this.Hide();
+        }
     }
 }

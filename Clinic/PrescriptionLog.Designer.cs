@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPrescriptionLog = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbName = new System.Windows.Forms.Label();
-            this.lbAddress = new System.Windows.Forms.Label();
-            this.lbTel = new System.Windows.Forms.Label();
-            this.lbGender = new System.Windows.Forms.Label();
             this.lbAge = new System.Windows.Forms.Label();
+            this.lbGender = new System.Windows.Forms.Label();
+            this.lbTel = new System.Windows.Forms.Label();
+            this.lbAddress = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tínhNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tạoĐơnThuốcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,19 +42,20 @@
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnViewMore = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrescriptionLog)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvPrescriptionLog
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 156);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(775, 303);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvPrescriptionLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPrescriptionLog.Location = new System.Drawing.Point(12, 193);
+            this.dgvPrescriptionLog.Name = "dgvPrescriptionLog";
+            this.dgvPrescriptionLog.RowTemplate.Height = 24;
+            this.dgvPrescriptionLog.Size = new System.Drawing.Size(775, 266);
+            this.dgvPrescriptionLog.TabIndex = 0;
             // 
             // panel1
             // 
@@ -68,32 +69,14 @@
             this.panel1.Size = new System.Drawing.Size(775, 116);
             this.panel1.TabIndex = 1;
             // 
-            // lbName
+            // lbAge
             // 
-            this.lbName.AutoSize = true;
-            this.lbName.Location = new System.Drawing.Point(3, 25);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(85, 17);
-            this.lbName.TabIndex = 0;
-            this.lbName.Text = "Bệnh nhân :";
-            // 
-            // lbAddress
-            // 
-            this.lbAddress.AutoSize = true;
-            this.lbAddress.Location = new System.Drawing.Point(3, 69);
-            this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(59, 17);
-            this.lbAddress.TabIndex = 1;
-            this.lbAddress.Text = "Địa chỉ :";
-            // 
-            // lbTel
-            // 
-            this.lbTel.AutoSize = true;
-            this.lbTel.Location = new System.Drawing.Point(308, 25);
-            this.lbTel.Name = "lbTel";
-            this.lbTel.Size = new System.Drawing.Size(103, 17);
-            this.lbTel.TabIndex = 2;
-            this.lbTel.Text = "Số điện thoại : ";
+            this.lbAge.AutoSize = true;
+            this.lbAge.Location = new System.Drawing.Point(551, 69);
+            this.lbAge.Name = "lbAge";
+            this.lbAge.Size = new System.Drawing.Size(81, 17);
+            this.lbAge.TabIndex = 4;
+            this.lbAge.Text = "Ngày Sinh :";
             // 
             // lbGender
             // 
@@ -104,14 +87,32 @@
             this.lbGender.TabIndex = 3;
             this.lbGender.Text = "Giới tính :";
             // 
-            // lbAge
+            // lbTel
             // 
-            this.lbAge.AutoSize = true;
-            this.lbAge.Location = new System.Drawing.Point(551, 69);
-            this.lbAge.Name = "lbAge";
-            this.lbAge.Size = new System.Drawing.Size(44, 17);
-            this.lbAge.TabIndex = 4;
-            this.lbAge.Text = "Tuổi :";
+            this.lbTel.AutoSize = true;
+            this.lbTel.Location = new System.Drawing.Point(308, 25);
+            this.lbTel.Name = "lbTel";
+            this.lbTel.Size = new System.Drawing.Size(103, 17);
+            this.lbTel.TabIndex = 2;
+            this.lbTel.Text = "Số điện thoại : ";
+            // 
+            // lbAddress
+            // 
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.Location = new System.Drawing.Point(3, 69);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(59, 17);
+            this.lbAddress.TabIndex = 1;
+            this.lbAddress.Text = "Địa chỉ :";
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Location = new System.Drawing.Point(3, 25);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(85, 17);
+            this.lbName.TabIndex = 0;
+            this.lbName.Text = "Bệnh nhân :";
             // 
             // menuStrip1
             // 
@@ -124,7 +125,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // tínhNăngToolStripMenuItem
             // 
@@ -138,13 +138,13 @@
             // tạoĐơnThuốcToolStripMenuItem
             // 
             this.tạoĐơnThuốcToolStripMenuItem.Name = "tạoĐơnThuốcToolStripMenuItem";
-            this.tạoĐơnThuốcToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.tạoĐơnThuốcToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.tạoĐơnThuốcToolStripMenuItem.Text = "Tạo đơn thuốc";
             // 
             // kháchHàngMớiToolStripMenuItem
             // 
             this.kháchHàngMớiToolStripMenuItem.Name = "kháchHàngMớiToolStripMenuItem";
-            this.kháchHàngMớiToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.kháchHàngMớiToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.kháchHàngMớiToolStripMenuItem.Text = "Khách hàng mới";
             // 
             // tàiKhoảnToolStripMenuItem
@@ -159,27 +159,39 @@
             // đăngXuấtToolStripMenuItem1
             // 
             this.đăngXuấtToolStripMenuItem1.Name = "đăngXuấtToolStripMenuItem1";
-            this.đăngXuấtToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.đăngXuấtToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
             this.đăngXuấtToolStripMenuItem1.Text = "Đăng xuất";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.thoátToolStripMenuItem.Text = "Thoát";
+            // 
+            // btnViewMore
+            // 
+            this.btnViewMore.Location = new System.Drawing.Point(628, 156);
+            this.btnViewMore.Name = "btnViewMore";
+            this.btnViewMore.Size = new System.Drawing.Size(159, 31);
+            this.btnViewMore.TabIndex = 3;
+            this.btnViewMore.Text = "View More";
+            this.btnViewMore.UseVisualStyleBackColor = true;
+            this.btnViewMore.Click += new System.EventHandler(this.btnViewMore_Click);
             // 
             // PrescriptionLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 471);
+            this.Controls.Add(this.btnViewMore);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPrescriptionLog);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PrescriptionLog";
             this.Text = "PrescriptionLog";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.PrescriptionLog_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrescriptionLog)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -191,7 +203,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPrescriptionLog;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbAge;
         private System.Windows.Forms.Label lbGender;
@@ -205,5 +217,6 @@
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
+        private System.Windows.Forms.Button btnViewMore;
     }
 }

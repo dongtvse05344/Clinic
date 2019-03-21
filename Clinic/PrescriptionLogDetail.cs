@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Clinic
+{
+    public partial class PrescriptionLogDetail : Form
+    {
+        private readonly Database.DTO.Prescription prescription;
+        private readonly Database.BLL.PrescriptionBLL _prescriptionBLL;
+        private readonly Database.BLL.DrugBLL _drugBLL;
+        public PrescriptionLogDetail(int id)
+        {
+            InitializeComponent();
+            _prescriptionBLL = new Database.BLL.PrescriptionBLL();
+            _drugBLL = new Database.BLL.DrugBLL();
+            this.prescription = _prescriptionBLL.GetPrescription(id);
+            foreach (var item in prescription.Details)
+            {
+                item.DrugName = _drugBLL.GetById(item.DrugId).Name; 
+            }
+        }
+
+        private void PrescriptionLogDetail_Load(object sender, EventArgs e)
+        {
+        }
+    }
+}

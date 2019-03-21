@@ -68,11 +68,27 @@ namespace Database.DAO
             };
             List<Prescription> result = new List<Prescription>();
             DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
-            while (dt.Rows.Count > 0)
+            foreach (DataRow r in dt.Rows)
             {
                 result.Add(GetPrescriptionFromDataRow(dt.Rows[0]));
             }
             return result;
+        }
+
+        public Prescription GetPrescription(int id)
+        {
+            string query = "select * from Prescriptions where Id = @Id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Id", SqlDbType.Int)
+            {
+                Value = id
+            };
+            DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
+            if(dt.Rows.Count>0)
+            {
+                return GetPrescriptionFromDataRow(dt.Rows[0]);
+            }
+            return null;
         }
     }
 }
