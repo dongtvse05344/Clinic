@@ -272,20 +272,20 @@
             // managermentDrugsToolStripMenuItem
             // 
             this.managermentDrugsToolStripMenuItem.Name = "managermentDrugsToolStripMenuItem";
-            this.managermentDrugsToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.managermentDrugsToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.managermentDrugsToolStripMenuItem.Text = "Kho thuốc";
             this.managermentDrugsToolStripMenuItem.Click += new System.EventHandler(this.managermentDrugsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(217, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(228, 6);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
-            this.logOutToolStripMenuItem.Text = "Đăng xuất";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.logOutToolStripMenuItem.Text = "Danh sách khách hàng";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // Customer

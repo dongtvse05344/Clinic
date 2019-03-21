@@ -29,7 +29,6 @@ namespace Database.DAO
             Customer.Gender = int.Parse(row["Gender"].ToString());
             return Customer;
         }
-
         public Customer GetByPhone(string phone)
         {
             string query = "select * from Customers where Phone = @Phone";
@@ -81,7 +80,6 @@ namespace Database.DAO
                 throw ex;
             }
         }
-
         public bool Update(Customer Customer)
         {
             string query = "UPDATE Customers SET Name=@Name, Address=@Address, Phone=@Phone, BirthDate=@BirthDate,Gender=@Gender" +
@@ -103,6 +101,20 @@ namespace Database.DAO
             {
                 throw ex;
             }
+        }
+        public List<Customer> GetCustomers()
+        {
+            string query = string.Format("select * from Customers");
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
+            List<Customer> list = new List<Customer>();
+
+            foreach (DataRow r in dt.Rows)
+            {
+                Customer customer = GetCustomerFromDataRow(r);
+                list.Add(customer);
+            }
+            return list;
         }
     }
 }

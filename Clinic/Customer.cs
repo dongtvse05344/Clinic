@@ -116,8 +116,8 @@ namespace Clinic
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
+            CustomerManager cm = new CustomerManager(this.currentDoctor);
+            cm.Show();
             this.Hide();
         }
     }

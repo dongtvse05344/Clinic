@@ -39,5 +39,9 @@ namespace Database.BLL
                 throw ex;
             }
         }
+        public List<Customer> GetCustomers()
+        {
+            return _customerDAO.GetCustomers();
+        }
     }
 }
