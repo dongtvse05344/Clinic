@@ -130,5 +130,12 @@ namespace Clinic
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
+
+        private void keDonThuoc_Click(object sender, EventArgs e)
+        {
+            PrescriptionLog log = new PrescriptionLog(this.doctor,this.customer);
+            log.Show();
+            this.Hide();
+        }
     }
 }

@@ -21,15 +21,15 @@ namespace Database.DAO
         {
             PrescriptionDetail prescriptionDetail = new PrescriptionDetail();
             prescriptionDetail.Id = int.Parse(row["Id"].ToString());
-            prescriptionDetail.IsLunch = bool.Parse(row["Id"].ToString());
-            prescriptionDetail.Morning = int.Parse(row["Id"].ToString());
-            prescriptionDetail.Noon = int.Parse(row["Id"].ToString());
-            prescriptionDetail.PrescriptionId = int.Parse(row["Id"].ToString());
-            prescriptionDetail.Quantity = int.Parse(row["Id"].ToString());
-            prescriptionDetail.ToUse = row["Id"].ToString();
-            prescriptionDetail.Afternoon = int.Parse(row["Id"].ToString());
-            prescriptionDetail.DrugId = int.Parse(row["Id"].ToString());
-            prescriptionDetail.Evening = int.Parse(row["Id"].ToString());
+            prescriptionDetail.IsLunch = bool.Parse(row["IsLunch"].ToString());
+            prescriptionDetail.Morning = int.Parse(row["Morning"].ToString());
+            prescriptionDetail.Noon = int.Parse(row["Noon"].ToString());
+            prescriptionDetail.PrescriptionId = int.Parse(row["PrescriptionId"].ToString());
+            prescriptionDetail.Quantity = int.Parse(row["Quantity"].ToString());
+            prescriptionDetail.ToUse = row["ToUse"].ToString();
+            prescriptionDetail.Afternoon = int.Parse(row["Afternoon"].ToString());
+            prescriptionDetail.DrugId = int.Parse(row["DrugId"].ToString());
+            prescriptionDetail.Evening = int.Parse(row["Evening"].ToString());
             return prescriptionDetail;
         }
         public bool Add(PrescriptionDetail model)
@@ -56,6 +56,23 @@ namespace Database.DAO
             {
                 throw ex;
             }
+        }
+
+        public List<PrescriptionDetail> GetPrescriptionDetails(int prescriptionId)
+        {
+            string query = "select * from PrescriptionDetail where PrescriptionId = @PrescriptionId";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@PrescriptionId", SqlDbType.Int)
+            {
+                Value = prescriptionId
+            };
+            List<PrescriptionDetail> result = new List<PrescriptionDetail>();
+            DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
+            foreach (DataRow r in dt.Rows)
+            {
+                result.Add(GetPrescriptionDetailFromDataRow(dt.Rows[0]));
+            }
+            return result;
         }
     }
 }

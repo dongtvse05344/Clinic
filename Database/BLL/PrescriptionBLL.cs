@@ -35,5 +35,16 @@ namespace Database.BLL
                 throw ex;
             }
         }
+
+        public List<Prescription> GetPrescriptionsByCustomer(int customerId)
+        {
+            return _prescriptionDAO.GetPrescriptionsByCustomer(customerId);
+        }
+        public Prescription GetPrescription(int id)
+        {
+            Prescription result = _prescriptionDAO.GetPrescription(id);
+            result.Details = _detailDAO.GetPrescriptionDetails(id);
+            return result;
+        }
     }
 }

@@ -32,7 +32,7 @@
             this.lblCustomer = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.featureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kêĐơnThuốcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.keDonThuoc = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvPrescription = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -100,22 +100,23 @@
             // featureToolStripMenuItem
             // 
             this.featureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kêĐơnThuốcToolStripMenuItem,
+            this.keDonThuoc,
             this.đăngXuấtToolStripMenuItem});
             this.featureToolStripMenuItem.Name = "featureToolStripMenuItem";
             this.featureToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.featureToolStripMenuItem.Text = "Tính năng";
             // 
-            // kêĐơnThuốcToolStripMenuItem
+            // keDonThuoc
             // 
-            this.kêĐơnThuốcToolStripMenuItem.Name = "kêĐơnThuốcToolStripMenuItem";
-            this.kêĐơnThuốcToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.kêĐơnThuốcToolStripMenuItem.Text = "Kê đơn thuốc";
+            this.keDonThuoc.Name = "keDonThuoc";
+            this.keDonThuoc.Size = new System.Drawing.Size(216, 26);
+            this.keDonThuoc.Text = "Lịch sử đơn thuốc";
+            this.keDonThuoc.Click += new System.EventHandler(this.keDonThuoc_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // dgvPrescription
@@ -164,19 +165,17 @@
             // 
             // txtToUse
             // 
-            this.txtToUse.Location = new System.Drawing.Point(428, 75);
-            this.txtToUse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtToUse.Location = new System.Drawing.Point(571, 92);
             this.txtToUse.Name = "txtToUse";
-            this.txtToUse.Size = new System.Drawing.Size(115, 20);
+            this.txtToUse.Size = new System.Drawing.Size(152, 22);
             this.txtToUse.TabIndex = 19;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(349, 75);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(465, 92);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.Size = new System.Drawing.Size(84, 17);
             this.label10.TabIndex = 18;
             this.label10.Text = "Cách dùng :";
             // 
@@ -398,7 +397,7 @@
         private System.Windows.Forms.Label lblCustomer;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem featureToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kêĐơnThuốcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem keDonThuoc;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgvPrescription;
         private System.Windows.Forms.Button btnDelete;
