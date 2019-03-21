@@ -24,6 +24,7 @@ namespace Clinic
 
         private void CustomerManager_Load(object sender, EventArgs e)
         {
+            LoadData();
         }
 
         private void LoadData()

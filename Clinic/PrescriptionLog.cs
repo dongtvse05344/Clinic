@@ -84,7 +84,7 @@ namespace Clinic
 
         private void quảnLíKhoThuốcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DrugManage drugManage = new DrugManage();
+            DrugManage drugManage = new DrugManage(this.doctor);
             drugManage.Show();
             this.Hide();
         }

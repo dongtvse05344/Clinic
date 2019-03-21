@@ -84,6 +84,11 @@ namespace Clinic
         {
             try
             {
+                if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtAddress.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập thông tin");
+                    return;
+                }
                 Database.DTO.Customer customer = new Database.DTO.Customer
                 {
 
@@ -100,6 +105,8 @@ namespace Clinic
                 catch (Exception)
                 {
                 }
+             
+
                 customer.Id = id;
                 if (rbFemale.Checked) { customer.Gender = 1; } else { customer.Gender = 0; }
 
@@ -126,7 +133,7 @@ namespace Clinic
 
         private void managermentDrugsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DrugManage drugs = new DrugManage();
+            DrugManage drugs = new DrugManage(this.currentDoctor);
             drugs.Show();
             this.Hide();
         }
@@ -136,6 +143,11 @@ namespace Clinic
             CustomerManager cm = new CustomerManager(this.currentDoctor);
             cm.Show();
             this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -157,5 +157,12 @@ namespace Clinic
             customerManager.Show();
             this.Hide();
         }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DrugManage drugManage = new DrugManage(this.doctor);
+            drugManage.Show();
+            this.Hide();
+        }
     }
 }

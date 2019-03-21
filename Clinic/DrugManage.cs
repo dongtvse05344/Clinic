@@ -15,10 +15,12 @@ namespace Clinic
     public partial class DrugManage : Form
     {
         private DrugBLL _drugBLL;
-        public DrugManage()
+        private Database.DTO.Doctor Doctor;
+        public DrugManage(Database.DTO.Doctor _Doctor)
         {
             InitializeComponent();
             _drugBLL = new DrugBLL();
+            Doctor = _Doctor;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -163,6 +165,36 @@ namespace Clinic
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void iTaoDonthuoc_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void iKhachHangMoi_Click(object sender, EventArgs e)
+        {
+            Customer customer = new Customer(this.Doctor);
+            customer.Show();
+            this.Hide();
+        }
+
+        private void iQuanLiKhoThuoc_Click(object sender, EventArgs e)
+        {
+            CustomerManager customerManager = new CustomerManager(this.Doctor);
+            customerManager.Show();
+            this.Hide();
+        }
+
+        private void iDangXuat_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void iThoat_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

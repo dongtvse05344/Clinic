@@ -45,18 +45,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.iTinhNang = new System.Windows.Forms.ToolStripMenuItem();
+            this.iKhachHangMoi = new System.Windows.Forms.ToolStripMenuItem();
+            this.iDanhSachKhachhang = new System.Windows.Forms.ToolStripMenuItem();
+            this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iDangXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.iThoat = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManageDrug)).BeginInit();
             this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvManageDrug
             // 
             this.dgvManageDrug.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvManageDrug.Location = new System.Drawing.Point(12, 11);
-            this.dgvManageDrug.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvManageDrug.Location = new System.Drawing.Point(7, 65);
+            this.dgvManageDrug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvManageDrug.Name = "dgvManageDrug";
             this.dgvManageDrug.RowTemplate.Height = 24;
-            this.dgvManageDrug.Size = new System.Drawing.Size(780, 289);
+            this.dgvManageDrug.Size = new System.Drawing.Size(585, 235);
             this.dgvManageDrug.TabIndex = 0;
             this.dgvManageDrug.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManageDrug_CellContentClick);
             this.dgvManageDrug.Click += new System.EventHandler(this.dgvManageDrug_Click);
@@ -78,52 +86,54 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(137, 321);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(94, 318);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(528, 224);
+            this.panel1.Size = new System.Drawing.Size(396, 182);
             this.panel1.TabIndex = 8;
             // 
             // txtType
             // 
-            this.txtType.Location = new System.Drawing.Point(103, 165);
-            this.txtType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtType.Location = new System.Drawing.Point(77, 134);
+            this.txtType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(280, 22);
+            this.txtType.Size = new System.Drawing.Size(211, 20);
             this.txtType.TabIndex = 5;
             // 
             // txtUnitPrice
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(103, 122);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUnitPrice.Location = new System.Drawing.Point(77, 99);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUnitPrice.Name = "txtUnitPrice";
-            this.txtUnitPrice.Size = new System.Drawing.Size(280, 22);
+            this.txtUnitPrice.Size = new System.Drawing.Size(211, 20);
             this.txtUnitPrice.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 169);
+            this.label6.Location = new System.Drawing.Point(16, 137);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 17);
+            this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 12;
             this.label6.Text = "Type :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 130);
+            this.label5.Location = new System.Drawing.Point(16, 106);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 17);
+            this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "UnitPrice :";
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(431, 169);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(323, 137);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 38);
+            this.btnDelete.Size = new System.Drawing.Size(56, 31);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -131,10 +141,10 @@
             // 
             // btnSearchName
             // 
-            this.btnSearchName.Location = new System.Drawing.Point(267, 12);
-            this.btnSearchName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearchName.Location = new System.Drawing.Point(200, 10);
+            this.btnSearchName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearchName.Name = "btnSearchName";
-            this.btnSearchName.Size = new System.Drawing.Size(117, 27);
+            this.btnSearchName.Size = new System.Drawing.Size(88, 22);
             this.btnSearchName.TabIndex = 9;
             this.btnSearchName.Text = "SearchName";
             this.btnSearchName.UseVisualStyleBackColor = true;
@@ -142,10 +152,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(431, 114);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(323, 93);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 38);
+            this.btnUpdate.Size = new System.Drawing.Size(56, 31);
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -153,10 +163,10 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(431, 60);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInsert.Location = new System.Drawing.Point(323, 49);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(75, 38);
+            this.btnInsert.Size = new System.Drawing.Size(56, 31);
             this.btnInsert.TabIndex = 7;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
@@ -164,10 +174,10 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(431, 7);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLoad.Location = new System.Drawing.Point(323, 6);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(75, 38);
+            this.btnLoad.Size = new System.Drawing.Size(56, 31);
             this.btnLoad.TabIndex = 6;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -175,71 +185,136 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(103, 86);
-            this.txtCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCode.Location = new System.Drawing.Point(77, 70);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(280, 22);
+            this.txtCode.Size = new System.Drawing.Size(211, 20);
             this.txtCode.TabIndex = 3;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(103, 49);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Location = new System.Drawing.Point(77, 40);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(280, 22);
+            this.txtName.Size = new System.Drawing.Size(211, 20);
             this.txtName.TabIndex = 2;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(103, 15);
-            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtID.Location = new System.Drawing.Point(77, 12);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(157, 22);
+            this.txtID.Size = new System.Drawing.Size(119, 20);
             this.txtID.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 90);
+            this.label3.Location = new System.Drawing.Point(17, 73);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 17);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Code:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 49);
+            this.label2.Location = new System.Drawing.Point(16, 40);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 17);
+            this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Name :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 18);
+            this.label4.Location = new System.Drawing.Point(17, 15);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 17);
+            this.label4.Size = new System.Drawing.Size(24, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "ID :";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iTinhNang,
+            this.tàiKhoảnToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(603, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "Tính năng";
+            // 
+            // iTinhNang
+            // 
+            this.iTinhNang.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iKhachHangMoi,
+            this.iDanhSachKhachhang});
+            this.iTinhNang.Name = "iTinhNang";
+            this.iTinhNang.Size = new System.Drawing.Size(73, 20);
+            this.iTinhNang.Text = "Tính năng";
+            // 
+            // iKhachHangMoi
+            // 
+            this.iKhachHangMoi.Name = "iKhachHangMoi";
+            this.iKhachHangMoi.Size = new System.Drawing.Size(194, 22);
+            this.iKhachHangMoi.Text = "Khách hàng mới";
+            this.iKhachHangMoi.Click += new System.EventHandler(this.iKhachHangMoi_Click);
+            // 
+            // iDanhSachKhachhang
+            // 
+            this.iDanhSachKhachhang.Name = "iDanhSachKhachhang";
+            this.iDanhSachKhachhang.Size = new System.Drawing.Size(194, 22);
+            this.iDanhSachKhachhang.Text = "Danh sách khách hàng";
+            this.iDanhSachKhachhang.Click += new System.EventHandler(this.iQuanLiKhoThuoc_Click);
+            // 
+            // tàiKhoảnToolStripMenuItem
+            // 
+            this.tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iDangXuat,
+            this.iThoat});
+            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
+            // 
+            // iDangXuat
+            // 
+            this.iDangXuat.Name = "iDangXuat";
+            this.iDangXuat.Size = new System.Drawing.Size(180, 22);
+            this.iDangXuat.Text = "Đăng xuất";
+            this.iDangXuat.Click += new System.EventHandler(this.iDangXuat_Click);
+            // 
+            // iThoat
+            // 
+            this.iThoat.Name = "iThoat";
+            this.iThoat.Size = new System.Drawing.Size(180, 22);
+            this.iThoat.Text = "Thoát";
+            this.iThoat.Click += new System.EventHandler(this.iThoat_Click);
+            // 
             // DrugManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 575);
+            this.ClientSize = new System.Drawing.Size(603, 511);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvManageDrug);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DrugManage";
             this.Text = "Manage Drug";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvManageDrug)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -262,6 +337,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem iTinhNang;
+        private System.Windows.Forms.ToolStripMenuItem iKhachHangMoi;
+        private System.Windows.Forms.ToolStripMenuItem iDanhSachKhachhang;
+        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iDangXuat;
+        private System.Windows.Forms.ToolStripMenuItem iThoat;
     }
 }
 
