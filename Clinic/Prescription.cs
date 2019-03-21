@@ -16,8 +16,10 @@ namespace Clinic
     {
         private readonly DrugBLL _drugBLL;
         List<PrescriptionDetail> _prescriptionDetails = new List<PrescriptionDetail>();
+        private readonly PrescriptionBLL _presctiptionBBL = new PrescriptionBLL();
         private Doctor doctor;
         private Database.DTO.Customer customer;
+        private Database.DTO.Prescription prescription = new Database.DTO.Prescription();
         public Prescription(Doctor _doctor, Database.DTO.Customer _customer)
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace Clinic
             txtTenThuoc.ValueMember = "Id";
             txtAfternoon.Text = "0";
             txtNoon.Text = "0";
+
         }
 
         private void btnChon_ChangeUICues(object sender, UICuesEventArgs e)
@@ -44,17 +47,60 @@ namespace Clinic
 
         private void btnChon_Click(object sender, EventArgs e)
         {
-            _prescriptionDetails.Add(new PrescriptionDetail
+            try
             {
-                DrugId = int.Parse(txtTenThuoc.SelectedValue.ToString()),
-                Morning = int.Parse(txtMorning.Text.ToString()),
-                Afternoon = int.Parse(txtAfternoon.Text.ToString()),
-                Noon = int.Parse(txtNoon.Text.ToString()),
-                Evening = int.Parse(txtEvening.Text.ToString()),
-                IsLunch = cbLunch.Checked
-            });
-            dgvPrescription.DataSource = _prescriptionDetails;
+                //validate
+                _prescriptionDetails.Add(new PrescriptionDetail
+                {
+                    DrugId = int.Parse(txtTenThuoc.SelectedValue.ToString()),
+                    DrugName = ((Drug)txtTenThuoc.SelectedItem).Name.ToString(),
+                    Morning = int.Parse(txtMorning.Text.ToString()),
+                    Afternoon = int.Parse(txtAfternoon.Text.ToString()),
+                    Noon = int.Parse(txtNoon.Text.ToString()),
+                    Evening = int.Parse(txtEvening.Text.ToString()),
+                    IsLunch = cbLunch.Checked,
+                    Quantity = int.Parse(txtSoLuong.Text.ToString()),
+                    ToUse = txtToUse.Text
+                });
+                LoadData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void LoadData()
+        {
+            dgvPrescription.DataSource = _prescriptionDetails.ToList();
             dgvPrescription.Columns["Id"].Visible = false;
+            dgvPrescription.Columns["PrescriptionId"].Visible = false;
+            dgvPrescription.Columns["DrugId"].Visible = false;
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            prescription.CustomerId = this.customer.Id;
+            prescription.DoctorId = this.doctor.Id;
+            prescription.Diagnostic = txtDiagnostic.Text;
+            prescription.Description = txtDescription.Text;
+            prescription.Details = this._prescriptionDetails;
+            try
+            {
+                _presctiptionBBL.Create(prescription);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int index = dgvPrescription.CurrentRow.Index;
+            this._prescriptionDetails.RemoveAt(index);
+            LoadData();
         }
     }
 }

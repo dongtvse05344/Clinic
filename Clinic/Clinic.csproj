@@ -70,6 +70,12 @@
     <Compile Include="Prescription.Designer.cs">
       <DependentUpon>Prescription.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrescriptionLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrescriptionLog.Designer.cs">
+      <DependentUpon>PrescriptionLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.cs">
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prescription.resx">
       <DependentUpon>Prescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrescriptionLog.resx">
+      <DependentUpon>PrescriptionLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -39,7 +39,7 @@ namespace Database.DAO
             SqlParameter[] sqlParameters = new SqlParameter[5];
             sqlParameters[0] = new SqlParameter("@DateCreated", SqlDbType.DateTime) { Value =  Prescription.DateCreated };
             sqlParameters[1] = new SqlParameter("@Diagnostic", SqlDbType.NVarChar) { Value =  Prescription.Diagnostic };
-            sqlParameters[2] = new SqlParameter("@Description", SqlDbType.Bit) { Value =  Prescription.Description };
+            sqlParameters[2] = new SqlParameter("@Description", SqlDbType.NVarChar) { Value =  Prescription.Description };
             sqlParameters[3] = new SqlParameter("@CustomerId", SqlDbType.Int) { Value =  Prescription.CustomerId };
             sqlParameters[4] = new SqlParameter("@DoctorId", SqlDbType.Int) { Value =  Prescription.DoctorId };
 

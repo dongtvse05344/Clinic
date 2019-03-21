@@ -10,6 +10,7 @@ namespace Database.DTO
     {
         public int Id { get; set; }
         public int PrescriptionId { get; set; }
+        public string DrugName { get; set; }
         public int DrugId { get; set; }
         public int Quantity { get; set; }
         public int Morning { get; set; }
