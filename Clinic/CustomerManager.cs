@@ -20,12 +20,16 @@ namespace Clinic
             Doctor = _Doctor;
             lbDoctor.Text += Doctor.Name;
             _customerBLL = new Database.BLL.CustomerBLL();
-            dgvCustomer.DataSource = _customerBLL.GetCustomers();
         }
 
         private void CustomerManager_Load(object sender, EventArgs e)
         {
+        }
 
+        private void LoadData()
+        {
+            dgvCustomer.DataSource = _customerBLL.GetCustomers();
+            dgvCustomer.Columns["Id"].Visible = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
