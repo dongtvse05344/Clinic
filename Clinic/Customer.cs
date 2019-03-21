@@ -16,16 +16,24 @@ namespace Clinic
     {
         private Doctor currentDoctor;
         private CustomerBLL _customerBLL;
-        
+
         public Customer(Doctor doctor)
         {
-            InitializeComponent();
-            currentDoctor = doctor;
-            _customerBLL = new CustomerBLL();
-            label1.Text += currentDoctor.Name;
-            txtBirthDate.Format = DateTimePickerFormat.Custom;
-            txtBirthDate.CustomFormat = "yyyy-MM-dd";
-            rbFemale.Checked = true;
+            try
+            {
+                InitializeComponent();
+                currentDoctor = doctor;
+                _customerBLL = new CustomerBLL();
+                label1.Text += currentDoctor.Name;
+                txtBirthDate.Format = DateTimePickerFormat.Custom;
+                txtBirthDate.CustomFormat = "yyyy-MM-dd";
+                rbFemale.Checked = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
         private void Prescription_Load(object sender, EventArgs e)
         {
@@ -39,28 +47,36 @@ namespace Clinic
 
         private void btnGetByPhone_Click(object sender, EventArgs e)
         {
-            string phone = txtPhone.Text;
-            var customer  = _customerBLL.GetByPhone(phone);
-            if (customer ==null)
+            try
             {
-                MessageBox.Show("Vui lòng điền thông tin khách hàng.");
-            }
-            else
-            {
-                txtId.Text = customer.Id.ToString();
-                txtName.Text = customer.Name; 
-                txtAddress.Text = customer.Address;
-                txtPhone.Text = customer.Phone;
-                txtBirthDate.Text = customer.BirthDate;
-                if(customer.Gender ==0)
+                string phone = txtPhone.Text;
+                var customer = _customerBLL.GetByPhone(phone);
+                if (customer == null)
                 {
-                    rbMale.Checked = true;
+                    MessageBox.Show("Vui lòng điền thông tin khách hàng.");
                 }
                 else
                 {
-                    rbFemale.Checked = true;
+                    txtId.Text = customer.Id.ToString();
+                    txtName.Text = customer.Name;
+                    txtAddress.Text = customer.Address;
+                    txtPhone.Text = customer.Phone;
+                    txtBirthDate.Text = customer.BirthDate;
+                    if (customer.Gender == 0)
+                    {
+                        rbMale.Checked = true;
+                    }
+                    else
+                    {
+                        rbFemale.Checked = true;
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
 
         }
 
@@ -68,8 +84,9 @@ namespace Clinic
         {
             try
             {
-                Database.DTO.Customer customer = new Database.DTO.Customer {
-                   
+                Database.DTO.Customer customer = new Database.DTO.Customer
+                {
+
                     Name = txtName.Text,
                     Address = txtAddress.Text,
                     Phone = txtPhone.Text,
@@ -88,7 +105,7 @@ namespace Clinic
 
                 _customerBLL.AddOrUpdate(customer);
                 MessageBox.Show("Cập nhật thông tin khách hàng thành công");
-                Prescription pre = new Prescription(this.currentDoctor, customer) ;
+                Prescription pre = new Prescription(this.currentDoctor, customer);
                 pre.Show();
                 this.Hide();
             }
@@ -96,7 +113,7 @@ namespace Clinic
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

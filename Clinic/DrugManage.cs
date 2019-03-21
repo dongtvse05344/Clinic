@@ -43,7 +43,15 @@ namespace Clinic
         }
         private void LoadData()
         {
-            dgvManageDrug.DataSource = _drugBLL.GetAll().ToList();
+            try
+            {
+                dgvManageDrug.DataSource = _drugBLL.GetAll().ToList();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dgvManageDrug_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -53,16 +61,24 @@ namespace Clinic
 
         private void dgvManageDrug_Click(object sender, EventArgs e)
         {
-            int index = dgvManageDrug.CurrentRow.Index;
-            if (dgvManageDrug.SelectedRows.Count > 0)
+            try
             {
-                txtID.Text = dgvManageDrug.SelectedRows[0].Cells["Id"].Value.ToString();
-                txtName.Text = dgvManageDrug.SelectedRows[0].Cells["Name"].Value.ToString();
-                txtCode.Text = dgvManageDrug.SelectedRows[0].Cells["Code"].Value.ToString();
-                txtUnitPrice.Text = dgvManageDrug.SelectedRows[0].Cells["UnitPrice"].Value.ToString();
-                txtType.Text = dgvManageDrug.SelectedRows[0].Cells["Type"].Value.ToString();
+                int index = dgvManageDrug.CurrentRow.Index;
+                if (dgvManageDrug.SelectedRows.Count > 0)
+                {
+                    txtID.Text = dgvManageDrug.SelectedRows[0].Cells["Id"].Value.ToString();
+                    txtName.Text = dgvManageDrug.SelectedRows[0].Cells["Name"].Value.ToString();
+                    txtCode.Text = dgvManageDrug.SelectedRows[0].Cells["Code"].Value.ToString();
+                    txtUnitPrice.Text = dgvManageDrug.SelectedRows[0].Cells["UnitPrice"].Value.ToString();
+                    txtType.Text = dgvManageDrug.SelectedRows[0].Cells["Type"].Value.ToString();
 
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void btnInsert_Click(object sender, EventArgs e)

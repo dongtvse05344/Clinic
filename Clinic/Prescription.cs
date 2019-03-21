@@ -37,6 +37,8 @@ namespace Clinic
             txtTenThuoc.ValueMember = "Id";
             txtAfternoon.Text = "0";
             txtNoon.Text = "0";
+            txtMorning.Text = "0";
+            txtEvening.Text = "0";
 
         }
 
@@ -58,8 +60,6 @@ namespace Clinic
                 {
                     MessageBox.Show("Vui lòng nhập dữ liệu");
                 }
-                
-
                 
                 else
                 {
@@ -103,6 +103,7 @@ namespace Clinic
             try
             {
                 _presctiptionBBL.Create(prescription);
+                MessageBox.Show("Tạo đơn thuốc thành công!!!");
             }
             catch (Exception ex)
             {

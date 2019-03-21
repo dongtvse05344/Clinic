@@ -17,7 +17,7 @@ namespace Clinic
         private Database.DTO.Customer customer;
         private Database.DTO.Doctor doctor;
         private readonly PrescriptionBLL _prescriptionBLL;
-        public PrescriptionLog(Database.DTO.Doctor _doctor,Database.DTO.Customer _customer)
+        public PrescriptionLog(Database.DTO.Doctor _doctor, Database.DTO.Customer _customer)
         {
             InitializeComponent();
             _prescriptionBLL = new PrescriptionBLL();
@@ -42,12 +42,20 @@ namespace Clinic
 
         private void btnViewMore_Click(object sender, EventArgs e)
         {
-            if (dgvPrescriptionLog.SelectedRows.Count > 0)
+            try
             {
-                var id = int.Parse(dgvPrescriptionLog.SelectedRows[0].Cells["Id"].Value.ToString());
-                PrescriptionLogDetail detail = new PrescriptionLogDetail(id);
-                detail.ShowDialog();
+                if (dgvPrescriptionLog.SelectedRows.Count > 0)
+                {
+                    var id = int.Parse(dgvPrescriptionLog.SelectedRows[0].Cells["Id"].Value.ToString());
+                    PrescriptionLogDetail detail = new PrescriptionLogDetail(id);
+                    detail.ShowDialog();
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void PrescriptionLog_Load(object sender, EventArgs e)
@@ -69,7 +77,7 @@ namespace Clinic
 
         private void tạoĐơnThuốcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Prescription prescription = new Prescription(this.doctor, this.customer) ;
+            Prescription prescription = new Prescription(this.doctor, this.customer);
             prescription.Show();
             this.Hide();
         }
@@ -83,7 +91,7 @@ namespace Clinic
 
         private void kháchHàngMớiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Customer Formcustomer = new Customer(this.doctor) ;
+            Customer Formcustomer = new Customer(this.doctor);
             Formcustomer.Show();
             this.Hide();
         }
