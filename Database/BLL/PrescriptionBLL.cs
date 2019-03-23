@@ -20,6 +20,13 @@ namespace Database.BLL
 
         public void Create(Prescription prescription)
         {
+            if (string.IsNullOrEmpty(prescription.Description)
+               || string.IsNullOrEmpty(prescription.Diagnostic)
+               || prescription.Details.Count == 0
+                )
+            {
+                throw new Exception("Input is not valid");
+            }
             try
             {
                 prescription.DateCreated = DateTime.Now.ToString("yyyy-MM-dd");

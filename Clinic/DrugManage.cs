@@ -65,7 +65,6 @@ namespace Clinic
         {
             try
             {
-                int index = dgvManageDrug.CurrentRow.Index;
                 if (dgvManageDrug.SelectedRows.Count > 0)
                 {
                     txtID.Text = dgvManageDrug.SelectedRows[0].Cells["Id"].Value.ToString();

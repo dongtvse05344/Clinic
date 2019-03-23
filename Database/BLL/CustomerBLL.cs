@@ -18,6 +18,10 @@ namespace Database.BLL
 
         public Customer GetByPhone(string phone)
         {
+            if(string.IsNullOrEmpty(phone))
+            {
+                throw new Exception("Input is not valid");
+            }
             return _customerDAO.GetByPhone(phone);
         }
 
@@ -26,7 +30,6 @@ namespace Database.BLL
             if (string.IsNullOrEmpty(customer.Name)
                 || string.IsNullOrEmpty(customer.Address)
                 || string.IsNullOrEmpty(customer.Phone)
-             // .  || customer.Phone.
                 )
             {
                 throw new Exception("Input is not valid");

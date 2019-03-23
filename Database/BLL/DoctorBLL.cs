@@ -18,6 +18,10 @@ namespace Database.BLL
 
         public Doctor GetDoctocByCode(string code)
         {
+            if(string.IsNullOrEmpty(code))
+            {
+                throw new Exception("Input is not valid");
+            }
             try
             {
                 var doctor = _doctorDAO.GetByCode(code);

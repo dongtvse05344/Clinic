@@ -31,6 +31,10 @@ namespace Database.BLL
 
         public Drug GetById(int id)
         {
+            if(id<0)
+            {
+                throw new Exception("id is not valid");
+            }
             try
             {
                 return _drugDAO.GetById(id);
@@ -42,6 +46,10 @@ namespace Database.BLL
         }
         public List<Drug> GetByName(string name)
         {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new Exception("name is not valid");
+            }
             try
             {
                 return _drugDAO.GetByName(name);
@@ -57,7 +65,9 @@ namespace Database.BLL
         {
             try
             {
-                if(string.IsNullOrEmpty(drug.Name) && string.IsNullOrEmpty(drug.Code) && string.IsNullOrEmpty(drug.Type))
+                if (string.IsNullOrEmpty(drug.Name)
+                    || string.IsNullOrEmpty(drug.Code)
+                    || string.IsNullOrEmpty(drug.Type))
                 {
                     throw new Exception("Invalid input");
                 }
