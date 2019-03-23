@@ -47,7 +47,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(10, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(289, 341);
             this.panel1.TabIndex = 0;
@@ -55,11 +55,11 @@
             // btnRegister
             // 
             this.btnRegister.Location = new System.Drawing.Point(21, 122);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(239, 24);
-            this.btnRegister.TabIndex = 5;
-            this.btnRegister.Text = "Register";
+            this.btnRegister.TabIndex = 4;
+            this.btnRegister.Text = "&Register";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
@@ -67,10 +67,10 @@
             // 
             this.rdnFemale.AutoSize = true;
             this.rdnFemale.Location = new System.Drawing.Point(161, 75);
-            this.rdnFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdnFemale.Margin = new System.Windows.Forms.Padding(2);
             this.rdnFemale.Name = "rdnFemale";
             this.rdnFemale.Size = new System.Drawing.Size(59, 17);
-            this.rdnFemale.TabIndex = 4;
+            this.rdnFemale.TabIndex = 3;
             this.rdnFemale.TabStop = true;
             this.rdnFemale.Text = "Female";
             this.rdnFemale.UseVisualStyleBackColor = true;
@@ -79,10 +79,10 @@
             // 
             this.rdnMale.AutoSize = true;
             this.rdnMale.Location = new System.Drawing.Point(85, 75);
-            this.rdnMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdnMale.Margin = new System.Windows.Forms.Padding(2);
             this.rdnMale.Name = "rdnMale";
             this.rdnMale.Size = new System.Drawing.Size(48, 17);
-            this.rdnMale.TabIndex = 3;
+            this.rdnMale.TabIndex = 2;
             this.rdnMale.TabStop = true;
             this.rdnMale.Text = "Male";
             this.rdnMale.UseVisualStyleBackColor = true;
@@ -90,10 +90,10 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(85, 39);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(176, 20);
-            this.txtName.TabIndex = 2;
+            this.txtName.TabIndex = 1;
             // 
             // label2
             // 
@@ -121,7 +121,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(308, 374);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Register";
             this.Text = "Register";
             this.panel1.ResumeLayout(false);

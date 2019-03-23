@@ -61,7 +61,7 @@
             // 
             this.dgvManageDrug.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvManageDrug.Location = new System.Drawing.Point(7, 65);
-            this.dgvManageDrug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvManageDrug.Margin = new System.Windows.Forms.Padding(2);
             this.dgvManageDrug.Name = "dgvManageDrug";
             this.dgvManageDrug.RowTemplate.Height = 24;
             this.dgvManageDrug.Size = new System.Drawing.Size(585, 235);
@@ -87,7 +87,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(94, 318);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(396, 182);
             this.panel1.TabIndex = 8;
@@ -95,7 +95,7 @@
             // txtType
             // 
             this.txtType.Location = new System.Drawing.Point(77, 134);
-            this.txtType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtType.Margin = new System.Windows.Forms.Padding(2);
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(211, 20);
             this.txtType.TabIndex = 5;
@@ -103,7 +103,7 @@
             // txtUnitPrice
             // 
             this.txtUnitPrice.Location = new System.Drawing.Point(77, 99);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(211, 20);
             this.txtUnitPrice.TabIndex = 4;
@@ -131,62 +131,62 @@
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(323, 137);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(56, 31);
             this.btnDelete.TabIndex = 10;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSearchName
             // 
             this.btnSearchName.Location = new System.Drawing.Point(200, 10);
-            this.btnSearchName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearchName.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchName.Name = "btnSearchName";
             this.btnSearchName.Size = new System.Drawing.Size(88, 22);
-            this.btnSearchName.TabIndex = 9;
-            this.btnSearchName.Text = "SearchName";
+            this.btnSearchName.TabIndex = 6;
+            this.btnSearchName.Text = "&SearchName";
             this.btnSearchName.UseVisualStyleBackColor = true;
             this.btnSearchName.Click += new System.EventHandler(this.btnSearchName_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(323, 93);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(56, 31);
-            this.btnUpdate.TabIndex = 8;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.Text = "&Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 
             this.btnInsert.Location = new System.Drawing.Point(323, 49);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(56, 31);
-            this.btnInsert.TabIndex = 7;
-            this.btnInsert.Text = "Insert";
+            this.btnInsert.TabIndex = 8;
+            this.btnInsert.Text = "&Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnLoad
             // 
             this.btnLoad.Location = new System.Drawing.Point(323, 6);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(56, 31);
-            this.btnLoad.TabIndex = 6;
-            this.btnLoad.Text = "Load";
+            this.btnLoad.TabIndex = 7;
+            this.btnLoad.Text = "&Load";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // txtCode
             // 
             this.txtCode.Location = new System.Drawing.Point(77, 70);
-            this.txtCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(211, 20);
             this.txtCode.TabIndex = 3;
@@ -194,7 +194,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(77, 40);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(211, 20);
             this.txtName.TabIndex = 2;
@@ -202,7 +202,7 @@
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(77, 12);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(119, 20);
@@ -284,14 +284,14 @@
             // iDangXuat
             // 
             this.iDangXuat.Name = "iDangXuat";
-            this.iDangXuat.Size = new System.Drawing.Size(180, 22);
+            this.iDangXuat.Size = new System.Drawing.Size(127, 22);
             this.iDangXuat.Text = "Đăng xuất";
             this.iDangXuat.Click += new System.EventHandler(this.iDangXuat_Click);
             // 
             // iThoat
             // 
             this.iThoat.Name = "iThoat";
-            this.iThoat.Size = new System.Drawing.Size(180, 22);
+            this.iThoat.Size = new System.Drawing.Size(127, 22);
             this.iThoat.Text = "Thoát";
             this.iThoat.Click += new System.EventHandler(this.iThoat_Click);
             // 
@@ -304,7 +304,7 @@
             this.Controls.Add(this.dgvManageDrug);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DrugManage";
             this.Text = "Manage Drug";
             this.Load += new System.EventHandler(this.Form1_Load);

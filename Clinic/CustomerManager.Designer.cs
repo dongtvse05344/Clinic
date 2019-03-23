@@ -37,39 +37,43 @@
             // dgvCustomer
             // 
             this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomer.Location = new System.Drawing.Point(27, 76);
+            this.dgvCustomer.Location = new System.Drawing.Point(20, 62);
+            this.dgvCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.RowTemplate.Height = 24;
-            this.dgvCustomer.Size = new System.Drawing.Size(743, 362);
+            this.dgvCustomer.Size = new System.Drawing.Size(557, 294);
             this.dgvCustomer.TabIndex = 0;
             // 
             // lbDoctor
             // 
             this.lbDoctor.AutoSize = true;
-            this.lbDoctor.Location = new System.Drawing.Point(27, 36);
+            this.lbDoctor.Location = new System.Drawing.Point(20, 29);
+            this.lbDoctor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDoctor.Name = "lbDoctor";
-            this.lbDoctor.Size = new System.Drawing.Size(54, 17);
+            this.lbDoctor.Size = new System.Drawing.Size(45, 13);
             this.lbDoctor.TabIndex = 1;
             this.lbDoctor.Text = "Bác sĩ :";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(629, 36);
+            this.btnAdd.Location = new System.Drawing.Point(472, 29);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(141, 34);
+            this.btnAdd.Size = new System.Drawing.Size(106, 28);
             this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Add Customer";
+            this.btnAdd.Text = "&Add Customer";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // CustomerManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lbDoctor);
             this.Controls.Add(this.dgvCustomer);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CustomerManager";
             this.Text = "CustomerManager";
             this.Load += new System.EventHandler(this.CustomerManager_Load);

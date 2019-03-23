@@ -208,15 +208,15 @@
             // 
             // txtToUse
             // 
-            this.txtToUse.Location = new System.Drawing.Point(377, 93);
+            this.txtToUse.Location = new System.Drawing.Point(415, 75);
             this.txtToUse.Name = "txtToUse";
             this.txtToUse.Size = new System.Drawing.Size(152, 20);
-            this.txtToUse.TabIndex = 19;
+            this.txtToUse.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(291, 97);
+            this.label10.Location = new System.Drawing.Point(324, 76);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 13);
             this.label10.TabIndex = 18;
@@ -236,15 +236,15 @@
             this.txtNoon.Location = new System.Drawing.Point(221, 37);
             this.txtNoon.Name = "txtNoon";
             this.txtNoon.Size = new System.Drawing.Size(29, 20);
-            this.txtNoon.TabIndex = 16;
+            this.txtNoon.TabIndex = 4;
             // 
             // btnXuat
             // 
             this.btnXuat.Location = new System.Drawing.Point(428, 124);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(100, 23);
-            this.btnXuat.TabIndex = 14;
-            this.btnXuat.Text = "Xuất";
+            this.btnXuat.TabIndex = 11;
+            this.btnXuat.Text = "&Xuất";
             this.btnXuat.UseVisualStyleBackColor = true;
             this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
@@ -253,8 +253,8 @@
             this.btnChon.Location = new System.Drawing.Point(84, 124);
             this.btnChon.Name = "btnChon";
             this.btnChon.Size = new System.Drawing.Size(91, 23);
-            this.btnChon.TabIndex = 13;
-            this.btnChon.Text = "Chọn";
+            this.btnChon.TabIndex = 10;
+            this.btnChon.Text = "&Chọn";
             this.btnChon.UseVisualStyleBackColor = true;
             this.btnChon.Click += new System.EventHandler(this.btnChon_Click);
             this.btnChon.ChangeUICues += new System.Windows.Forms.UICuesEventHandler(this.btnChon_ChangeUICues);
@@ -265,7 +265,7 @@
             this.cbLunch.Location = new System.Drawing.Point(254, 75);
             this.cbLunch.Name = "cbLunch";
             this.cbLunch.Size = new System.Drawing.Size(60, 17);
-            this.cbLunch.TabIndex = 12;
+            this.cbLunch.TabIndex = 8;
             this.cbLunch.Text = "Sau ăn";
             this.cbLunch.UseVisualStyleBackColor = true;
             // 
@@ -274,7 +274,7 @@
             this.txtSoLuong.Location = new System.Drawing.Point(84, 72);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(132, 20);
-            this.txtSoLuong.TabIndex = 11;
+            this.txtSoLuong.TabIndex = 7;
             this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
             // 
             // txtEvening
@@ -282,14 +282,14 @@
             this.txtEvening.Location = new System.Drawing.Point(498, 37);
             this.txtEvening.Name = "txtEvening";
             this.txtEvening.Size = new System.Drawing.Size(31, 20);
-            this.txtEvening.TabIndex = 10;
+            this.txtEvening.TabIndex = 6;
             // 
             // txtAfternoon
             // 
             this.txtAfternoon.Location = new System.Drawing.Point(360, 37);
             this.txtAfternoon.Name = "txtAfternoon";
             this.txtAfternoon.Size = new System.Drawing.Size(29, 20);
-            this.txtAfternoon.TabIndex = 9;
+            this.txtAfternoon.TabIndex = 5;
             // 
             // label7
             // 
@@ -304,7 +304,7 @@
             this.txtMorning.Location = new System.Drawing.Point(129, 37);
             this.txtMorning.Name = "txtMorning";
             this.txtMorning.Size = new System.Drawing.Size(28, 20);
-            this.txtMorning.TabIndex = 7;
+            this.txtMorning.TabIndex = 3;
             // 
             // label6
             // 
@@ -381,10 +381,10 @@
             // txtDiagnostic
             // 
             this.txtDiagnostic.Location = new System.Drawing.Point(85, 70);
-            this.txtDiagnostic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiagnostic.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiagnostic.Name = "txtDiagnostic";
             this.txtDiagnostic.Size = new System.Drawing.Size(528, 20);
-            this.txtDiagnostic.TabIndex = 7;
+            this.txtDiagnostic.TabIndex = 1;
             // 
             // label9
             // 
@@ -399,10 +399,10 @@
             // txtDescription
             // 
             this.txtDescription.Location = new System.Drawing.Point(85, 93);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(528, 20);
-            this.txtDescription.TabIndex = 9;
+            this.txtDescription.TabIndex = 2;
             // 
             // Prescription
             // 
@@ -420,7 +420,7 @@
             this.Controls.Add(this.lblDoctor);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Prescription";
             this.Text = "Prescription";
             this.Load += new System.EventHandler(this.Prescription_Load);

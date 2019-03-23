@@ -133,9 +133,12 @@ namespace Clinic
 
         private void managermentDrugsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+          
             DrugManage drugs = new DrugManage(this.currentDoctor);
             drugs.Show();
             this.Hide();
+
+
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
