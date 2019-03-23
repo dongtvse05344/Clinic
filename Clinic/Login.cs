@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,14 @@ namespace Clinic
         {
             InitializeComponent();
             _doctorBLL = new DoctorBLL();
-            txtCode.Text = "02528";
+            //txtCode.Text = "02528";
+            try
+            {
+                txtCode.Text =System.IO.File.ReadAllText(Directory.GetCurrentDirectory() + "/Dem.txt");
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -32,6 +40,12 @@ namespace Clinic
                 }
                 else
                 {
+                    if (!System.IO.File.Exists(Directory.GetCurrentDirectory() +"/Dem.txt"))
+                    {
+                        System.IO.File
+                               .WriteAllText(Directory.GetCurrentDirectory() + "/Dem.txt",
+                                            txtCode.Text);
+                    }
                     Customer pre = new Customer(doctor);
                     pre.Show();
                     this.Hide();
