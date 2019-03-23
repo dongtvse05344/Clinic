@@ -45,6 +45,23 @@ namespace Database.DAO
             return null;
         }
 
+        public Doctor GetById(int id)
+        {
+            string query = "select * from Doctors where Id = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@id", SqlDbType.Int)
+            {
+                Value = id
+            };
+
+            DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
+            if (dt.Rows.Count > 0)
+            {
+                return GetDoctorFromDataRow(dt.Rows[0]);
+            }
+            return null;
+        }
+
         public bool Add(Doctor doctor)
         {
             string query = "INSERT INTO Doctors values(@Name,@Code,@Gender)";

@@ -117,6 +117,24 @@ namespace Database.DAO
             return list;
         }
 
+        public List<Customer> GetCustomers(string nameSearch)
+        {
+            string query = string.Format("select * from Customers where Name Like @Name");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Name", SqlDbType.NVarChar) { Value = "%"+nameSearch+"%" };
+
+            DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
+            List<Customer> list = new List<Customer>();
+
+            foreach (DataRow r in dt.Rows)
+            {
+                Customer customer = GetCustomerFromDataRow(r);
+                list.Add(customer);
+            }
+            return list;
+        }
+
+
         public Customer GetCustomer(int id)
         {
             string query = string.Format("select * from Customers Where Id= @Id");

@@ -37,6 +37,27 @@ namespace Database.BLL
             }
         }
 
+        public Doctor GetDoctocById(int id)
+        {
+            if (id < 0)
+            {
+                throw new Exception("Input is not valid");
+            }
+            try
+            {
+                var doctor = _doctorDAO.GetById(id);
+                if (doctor == null)
+                {
+                    throw new Exception("Doctor is not existed");
+                }
+                return doctor;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
         public string CreateDoctor(Doctor doctor)
         {
             if (string.IsNullOrEmpty(doctor.Name))
@@ -65,5 +86,6 @@ namespace Database.BLL
                 throw new Exception(e.Message);
             }
         }
+
     }
 }

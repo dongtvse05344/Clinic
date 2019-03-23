@@ -15,12 +15,14 @@ namespace Clinic
         private readonly Database.DTO.Prescription prescription;
         private readonly Database.BLL.PrescriptionBLL _prescriptionBLL;
         private readonly Database.BLL.DrugBLL _drugBLL;
+        private readonly Database.BLL.DoctorBLL _doctorBLL;
         private readonly float amount = 0;
         public PrescriptionLogDetail(int id)
         {
             InitializeComponent();
             _prescriptionBLL = new Database.BLL.PrescriptionBLL();
             _drugBLL = new Database.BLL.DrugBLL();
+            _doctorBLL = new Database.BLL.DoctorBLL();
             this.prescription = _prescriptionBLL.GetPrescription(id);
             foreach (var item in prescription.Details)
             {
