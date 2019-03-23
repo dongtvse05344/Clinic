@@ -23,6 +23,15 @@ namespace Database.BLL
 
         public void AddOrUpdate(Customer customer)
         {
+            if (string.IsNullOrEmpty(customer.Name)
+                || string.IsNullOrEmpty(customer.Address)
+                || string.IsNullOrEmpty(customer.Phone)
+             // .  || customer.Phone.
+                )
+            {
+                throw new Exception("Input is not valid");
+            }
+            
             try
             {
                 if(_customerDAO.GetById(customer.Id) ==null)
@@ -43,5 +52,10 @@ namespace Database.BLL
         {
             return _customerDAO.GetCustomers();
         }
+        public Customer GetCustomer(int id)
+        {
+            return _customerDAO.GetCustomer(id);
+        }
+
     }
 }

@@ -32,7 +32,6 @@ namespace Clinic
                 }
                 else
                 {
-                    //MessageBox.Show("Hello " + doctor.Name);
                     Customer pre = new Customer(doctor);
                     pre.Show();
                     this.Hide();

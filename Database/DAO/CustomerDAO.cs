@@ -116,5 +116,21 @@ namespace Database.DAO
             }
             return list;
         }
+
+        public Customer GetCustomer(int id)
+        {
+            string query = string.Format("select * from Customers Where Id= @Id");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Id", SqlDbType.Int) { Value = id };
+
+            DataTable dt = conn.ExecuteSelectQuery(query, sqlParameters);
+            Customer result = null;
+
+            if(dt.Rows.Count>0)
+            {
+                result = GetCustomerFromDataRow(dt.Rows[0]);
+            }
+            return result;
+        }
     }
 }
