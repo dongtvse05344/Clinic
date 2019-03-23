@@ -17,6 +17,7 @@ namespace Clinic
         private readonly Database.BLL.DrugBLL _drugBLL;
         private readonly Database.BLL.DoctorBLL _doctorBLL;
         private readonly float amount = 0;
+        private readonly Database.DTO.Doctor doctor;
         public PrescriptionLogDetail(int id)
         {
             InitializeComponent();
@@ -28,9 +29,11 @@ namespace Clinic
             {
                 var drug = _drugBLL.GetById(item.DrugId);
                 item.DrugName = drug.Name;
-                amount = drug.UnitPrice * item.Quantity;
+                amount += drug.UnitPrice * item.Quantity;
             }
             lbAmount.Text += amount + " $";
+            doctor = _doctorBLL.GetDoctocById(prescription.DoctorId);
+            lbdoctor.Text += " " + doctor.Name;
         }
 
         private void PrescriptionLogDetail_Load(object sender, EventArgs e)

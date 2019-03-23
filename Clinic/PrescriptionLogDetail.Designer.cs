@@ -34,6 +34,7 @@
             this.lbGhiChu = new System.Windows.Forms.Label();
             this.dgvPrescriptionLogDetail = new System.Windows.Forms.DataGridView();
             this.lbAmount = new System.Windows.Forms.Label();
+            this.lbdoctor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrescriptionLogDetail)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             // 
             this.dgvPrescriptionLogDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrescriptionLogDetail.Location = new System.Drawing.Point(43, 121);
-            this.dgvPrescriptionLogDetail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPrescriptionLogDetail.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPrescriptionLogDetail.Name = "dgvPrescriptionLogDetail";
             this.dgvPrescriptionLogDetail.Size = new System.Drawing.Size(721, 239);
             this.dgvPrescriptionLogDetail.TabIndex = 4;
@@ -95,11 +96,21 @@
             this.lbAmount.TabIndex = 5;
             this.lbAmount.Text = "Tổng tiền : ";
             // 
+            // lbdoctor
+            // 
+            this.lbdoctor.AutoSize = true;
+            this.lbdoctor.Location = new System.Drawing.Point(503, 42);
+            this.lbdoctor.Name = "lbdoctor";
+            this.lbdoctor.Size = new System.Drawing.Size(101, 17);
+            this.lbdoctor.TabIndex = 6;
+            this.lbdoctor.Text = "Bác sĩ kê đơn :";
+            // 
             // PrescriptionLogDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 450);
+            this.Controls.Add(this.lbdoctor);
             this.Controls.Add(this.lbAmount);
             this.Controls.Add(this.dgvPrescriptionLogDetail);
             this.Controls.Add(this.lbGhiChu);
@@ -124,5 +135,6 @@
         private System.Windows.Forms.Label lbGhiChu;
         private System.Windows.Forms.DataGridView dgvPrescriptionLogDetail;
         private System.Windows.Forms.Label lbAmount;
+        private System.Windows.Forms.Label lbdoctor;
     }
 }
