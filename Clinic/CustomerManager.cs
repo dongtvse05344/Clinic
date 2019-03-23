@@ -39,5 +39,7 @@ namespace Clinic
             customer.Show();
             this.Hide();
         }
+
+       
     }
 }
