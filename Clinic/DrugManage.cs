@@ -84,12 +84,13 @@ namespace Clinic
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text;
-            string code = txtCode.Text;
-            float unitPrice = float.Parse(txtUnitPrice.Text);
-            string type = txtType.Text;
+            
             try
             {
+                string name = txtName.Text;
+                string code = txtCode.Text;
+                float unitPrice = float.Parse(txtUnitPrice.Text);
+                string type = txtType.Text;
                 _drugBLL.Add(new Drug
                 {
                     Name = name,

@@ -38,11 +38,12 @@
             // 
             this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomer.Location = new System.Drawing.Point(20, 62);
-            this.dgvCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.RowTemplate.Height = 24;
             this.dgvCustomer.Size = new System.Drawing.Size(557, 294);
             this.dgvCustomer.TabIndex = 0;
+            this.dgvCustomer.Click += new System.EventHandler(this.dgvCustomer_Click);
             // 
             // lbDoctor
             // 
@@ -57,7 +58,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(472, 29);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(106, 28);
             this.btnAdd.TabIndex = 2;
@@ -73,7 +74,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lbDoctor);
             this.Controls.Add(this.dgvCustomer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CustomerManager";
             this.Text = "CustomerManager";
             this.Load += new System.EventHandler(this.CustomerManager_Load);

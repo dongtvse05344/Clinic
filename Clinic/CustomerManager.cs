@@ -39,5 +39,26 @@ namespace Clinic
             customer.Show();
             this.Hide();
         }
+
+        private void dgvCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvCustomer.SelectedRows.Count > 0)
+                {
+                    int id = int.Parse(dgvCustomer.SelectedRows[0].Cells["Id"].Value.ToString()); ;
+                    var customer = _customerBLL.GetCustomer(id);
+                    PrescriptionLog customerForm = new PrescriptionLog(this.Doctor, customer);
+                    customerForm.Show();
+                    this.Hide();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
     }
 }

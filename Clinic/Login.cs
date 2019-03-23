@@ -54,5 +54,10 @@ namespace Clinic
         {
 
         }
+
+        private void Login_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
     }
 }

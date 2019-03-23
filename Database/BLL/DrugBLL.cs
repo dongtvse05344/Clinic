@@ -67,7 +67,8 @@ namespace Database.BLL
             {
                 if (string.IsNullOrEmpty(drug.Name)
                     || string.IsNullOrEmpty(drug.Code)
-                    || string.IsNullOrEmpty(drug.Type))
+                    || string.IsNullOrEmpty(drug.Type)
+                    )
                 {
                     throw new Exception("Invalid input");
                 }

@@ -99,6 +99,7 @@
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Login_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
