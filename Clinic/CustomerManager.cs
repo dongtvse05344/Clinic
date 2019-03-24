@@ -60,5 +60,41 @@ namespace Clinic
 
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void khoThuốcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DrugManage drug = new DrugManage(this.Doctor);
+            drug.Show();
+            this.Hide();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvCustomer.DataSource = _customerBLL.GetCustomers(txtNameSearch.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
