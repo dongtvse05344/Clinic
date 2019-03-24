@@ -95,5 +95,12 @@ namespace Clinic
             Formcustomer.Show();
             this.Hide();
         }
+
+        private void danhSáchKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerManager customerManager = new CustomerManager(this.doctor);
+            customerManager.Show();
+            this.Hide();
+        }
     }
 }

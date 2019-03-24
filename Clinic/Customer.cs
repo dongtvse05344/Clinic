@@ -111,6 +111,8 @@ namespace Clinic
                 if (rbFemale.Checked) { customer.Gender = 1; } else { customer.Gender = 0; }
 
                 _customerBLL.AddOrUpdate(customer);
+                var _id = _customerBLL.GetByPhone(customer.Phone).Id;
+                customer.Id = _id;
                 MessageBox.Show("Cập nhật thông tin khách hàng thành công");
                 Prescription pre = new Prescription(this.currentDoctor, customer);
                 pre.Show();

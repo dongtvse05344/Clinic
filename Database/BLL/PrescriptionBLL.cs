@@ -29,7 +29,7 @@ namespace Database.BLL
             }
             try
             {
-                prescription.DateCreated = DateTime.Now.ToString("yyyy-MM-dd");
+                prescription.DateCreated = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
                 int prescriptioId = _prescriptionDAO.Add(prescription);
                 foreach (var item in prescription.Details)
                 {

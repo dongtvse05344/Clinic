@@ -104,6 +104,9 @@ namespace Clinic
             {
                 _presctiptionBBL.Create(prescription);
                 MessageBox.Show("Tạo đơn thuốc thành công!!!");
+                PrescriptionLog log = new PrescriptionLog(this.doctor, this.customer);
+                log.Show();
+                this.Hide();
             }
             catch (Exception ex)
             {
