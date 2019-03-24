@@ -55,6 +55,10 @@ namespace Database.BLL
         {
             return _customerDAO.GetCustomers();
         }
+        public List<Customer> GetCustomers(string nameSearch)
+        {
+            return _customerDAO.GetCustomers(nameSearch);
+        }
         public Customer GetCustomer(int id)
         {
             return _customerDAO.GetCustomer(id);

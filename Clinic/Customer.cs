@@ -105,7 +105,7 @@ namespace Clinic
                 catch (Exception)
                 {
                 }
-             
+
 
                 customer.Id = id;
                 if (rbFemale.Checked) { customer.Gender = 1; } else { customer.Gender = 0; }
@@ -114,7 +114,7 @@ namespace Clinic
                 var _id = _customerBLL.GetByPhone(customer.Phone).Id;
                 customer.Id = _id;
                 MessageBox.Show("Cập nhật thông tin khách hàng thành công");
-                Prescription pre = new Prescription(this.currentDoctor, customer);
+                PrescriptionLog pre = new PrescriptionLog(this.currentDoctor, customer);
                 pre.Show();
                 this.Hide();
             }
@@ -135,7 +135,7 @@ namespace Clinic
 
         private void managermentDrugsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+
             DrugManage drugs = new DrugManage(this.currentDoctor);
             drugs.Show();
             this.Hide();
