@@ -22,7 +22,7 @@ namespace Clinic
             //txtCode.Text = "02528";
             try
             {
-                txtCode.Text =System.IO.File.ReadAllText(Directory.GetCurrentDirectory() + "/Dem.txt");
+                txtCodeMask.Text =System.IO.File.ReadAllText(Directory.GetCurrentDirectory() + "/Dem.txt");
             }
             catch (Exception ex)
             {
@@ -33,7 +33,7 @@ namespace Clinic
         {
             try
             {
-                var doctor = _doctorBLL.GetDoctocByCode(txtCode.Text);
+                var doctor = _doctorBLL.GetDoctocByCode(txtCodeMask.Text);
                 if (doctor ==null)
                 {
                     MessageBox.Show("Code is not existed");
@@ -44,7 +44,7 @@ namespace Clinic
                     {
                         System.IO.File
                                .WriteAllText(Directory.GetCurrentDirectory() + "/Dem.txt",
-                                            txtCode.Text);
+                                            txtCodeMask.Text);
                     }
                     Customer pre = new Customer(doctor);
                     pre.Show();

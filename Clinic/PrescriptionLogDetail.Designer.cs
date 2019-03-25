@@ -81,10 +81,10 @@
             // dgvPrescriptionLogDetail
             // 
             this.dgvPrescriptionLogDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrescriptionLogDetail.Location = new System.Drawing.Point(43, 121);
+            this.dgvPrescriptionLogDetail.Location = new System.Drawing.Point(13, 121);
             this.dgvPrescriptionLogDetail.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPrescriptionLogDetail.Name = "dgvPrescriptionLogDetail";
-            this.dgvPrescriptionLogDetail.Size = new System.Drawing.Size(721, 239);
+            this.dgvPrescriptionLogDetail.Size = new System.Drawing.Size(1140, 239);
             this.dgvPrescriptionLogDetail.TabIndex = 4;
             // 
             // lbAmount
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 450);
+            this.ClientSize = new System.Drawing.Size(1166, 450);
             this.Controls.Add(this.lbdoctor);
             this.Controls.Add(this.lbAmount);
             this.Controls.Add(this.dgvPrescriptionLogDetail);

@@ -88,7 +88,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(24, 79);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(380, 305);
             this.panel1.TabIndex = 1;
@@ -97,7 +97,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(59, 260);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(100, 28);
             this.btnRefresh.TabIndex = 15;
@@ -108,7 +108,7 @@
             // txtBirthDate
             // 
             this.txtBirthDate.Location = new System.Drawing.Point(80, 170);
-            this.txtBirthDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBirthDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtBirthDate.Name = "txtBirthDate";
             this.txtBirthDate.Size = new System.Drawing.Size(177, 22);
             this.txtBirthDate.TabIndex = 14;
@@ -116,15 +116,16 @@
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(80, 138);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(177, 22);
             this.txtPhone.TabIndex = 13;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(80, 101);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(177, 22);
             this.txtAddress.TabIndex = 12;
@@ -132,7 +133,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(80, 63);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(177, 22);
             this.txtName.TabIndex = 11;
@@ -140,7 +141,7 @@
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(80, 22);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(177, 22);
@@ -149,7 +150,7 @@
             // btnOk
             // 
             this.btnOk.Location = new System.Drawing.Point(187, 260);
-            this.btnOk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(4);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(100, 28);
             this.btnOk.TabIndex = 9;
@@ -160,7 +161,7 @@
             // btnGetByPhone
             // 
             this.btnGetByPhone.Location = new System.Drawing.Point(267, 135);
-            this.btnGetByPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGetByPhone.Margin = new System.Windows.Forms.Padding(4);
             this.btnGetByPhone.Name = "btnGetByPhone";
             this.btnGetByPhone.Size = new System.Drawing.Size(100, 28);
             this.btnGetByPhone.TabIndex = 8;
@@ -172,7 +173,7 @@
             // 
             this.rbMale.AutoSize = true;
             this.rbMale.Location = new System.Drawing.Point(223, 217);
-            this.rbMale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbMale.Margin = new System.Windows.Forms.Padding(4);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(59, 21);
             this.rbMale.TabIndex = 7;
@@ -184,7 +185,7 @@
             this.rbFemale.AutoSize = true;
             this.rbFemale.Checked = true;
             this.rbFemale.Location = new System.Drawing.Point(80, 217);
-            this.rbFemale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbFemale.Margin = new System.Windows.Forms.Padding(4);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(75, 21);
             this.rbFemale.TabIndex = 6;
@@ -306,14 +307,14 @@
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -326,7 +327,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Customer";
             this.Text = "Customer";
             this.Load += new System.EventHandler(this.Prescription_Load);

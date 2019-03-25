@@ -39,13 +39,13 @@
             this.tínhNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tạoĐơnThuốcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kháchHàngMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quảnLíKhoThuốcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.danhSáchKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnViewMore = new System.Windows.Forms.Button();
-            this.danhSáchKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrescriptionLog)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -155,12 +155,24 @@
             this.kháchHàngMớiToolStripMenuItem.Text = "Khách hàng mới";
             this.kháchHàngMớiToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngMớiToolStripMenuItem_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(228, 6);
+            // 
             // quảnLíKhoThuốcToolStripMenuItem
             // 
             this.quảnLíKhoThuốcToolStripMenuItem.Name = "quảnLíKhoThuốcToolStripMenuItem";
             this.quảnLíKhoThuốcToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.quảnLíKhoThuốcToolStripMenuItem.Text = "Quản lí kho thuốc";
             this.quảnLíKhoThuốcToolStripMenuItem.Click += new System.EventHandler(this.quảnLíKhoThuốcToolStripMenuItem_Click);
+            // 
+            // danhSáchKháchHàngToolStripMenuItem
+            // 
+            this.danhSáchKháchHàngToolStripMenuItem.Name = "danhSáchKháchHàngToolStripMenuItem";
+            this.danhSáchKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.danhSáchKháchHàngToolStripMenuItem.Text = "Danh sách khách hàng";
+            this.danhSáchKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.danhSáchKháchHàngToolStripMenuItem_Click);
             // 
             // tàiKhoảnToolStripMenuItem
             // 
@@ -195,18 +207,6 @@
             this.btnViewMore.UseVisualStyleBackColor = true;
             this.btnViewMore.Click += new System.EventHandler(this.btnViewMore_Click);
             // 
-            // danhSáchKháchHàngToolStripMenuItem
-            // 
-            this.danhSáchKháchHàngToolStripMenuItem.Name = "danhSáchKháchHàngToolStripMenuItem";
-            this.danhSáchKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
-            this.danhSáchKháchHàngToolStripMenuItem.Text = "Danh sách khách hàng";
-            this.danhSáchKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.danhSáchKháchHàngToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(228, 6);
-            // 
             // PrescriptionLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -216,6 +216,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvPrescriptionLog);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PrescriptionLog";
             this.Text = "PrescriptionLog";
